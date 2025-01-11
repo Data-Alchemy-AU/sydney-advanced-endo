@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive} from '@angular/router';
+import {NgOptimizedImage} from "@angular/common";
+import {HomeComponent} from './home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [HomeComponent, RouterOutlet, RouterLink, RouterLinkActive, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'sydney-advanced-endo';
+  title = 'Sydney Advanced Endocrinology';
 }
