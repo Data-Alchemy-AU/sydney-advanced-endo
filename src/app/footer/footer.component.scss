@@ -1,3 +1,4 @@
 .primary-logo {
-  color: var(--prim);
+  color: var(--mat-primary-color);
+  fill: var(--mat-primary-color); /* This sets the primary theme color */
 }

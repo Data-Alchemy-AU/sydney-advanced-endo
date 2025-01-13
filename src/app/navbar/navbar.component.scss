@@ -1,0 +1,13 @@
+.primary-logo {
+  color: var(--mat-primary-color);
+  fill: var(--mat-primary-color); /* This sets the primary theme color */
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100% !important;
+}
+

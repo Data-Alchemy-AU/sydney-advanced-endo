@@ -26,24 +26,55 @@
 <!--  </div>-->
 <!--</nav>-->
 
-<section>
-  <div class="navbar">
-    <a [routerLink] = "'/home'">
-      <app-logo class = "primary-logo"></app-logo>
-<!--      <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>-->
-    </a>
-  <div class="example-button-row">
-    <a mat-button color="primary" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</a>
-    <a mat-button color="primary"  routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a>
-    <a mat-button color="primary"  routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a>
-    <a mat-button color="primary"  routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a>
-    <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>
+<!--<section>-->
+<!--  <div class="navbar">-->
+<!--&lt;!&ndash;    <div class="primary-logo">&ndash;&gt;-->
+<!--    <div>-->
+<!--      <a [routerLink] = "'/home'">-->
+<!--        <app-logo ></app-logo>-->
+<!--  &lt;!&ndash;      <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>&ndash;&gt;-->
+<!--      </a>-->
+<!--      </div>-->
+<!--    <div class="example-button-row">-->
+<!--      <a mat-button color="primary" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</a>-->
+<!--      <a mat-button color="primary"  routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a>-->
+<!--      <a mat-button color="primary"  routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a>-->
+<!--      <a mat-button color="primary"  routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a>-->
+<!--      <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>-->
+<!--    </div>-->
+<!--      <div class="navbar-actions">-->
+
+<!--        &lt;!&ndash; Add login/logout buttons or user-related actions here &ndash;&gt;-->
+<!--      </div>-->
+<!--</div>-->
+<!--</section>-->
+
+
+<mat-toolbar color="primary">
+
+  <button mat-button [routerLink] = "'/home'">
+    <app-logo ></app-logo>
+  </button>
+
+  <div>
+    <button mat-button  routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>
+    <button mat-button  routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>
+    <button mat-button  routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</button>
+    <button mat-button  routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>
+    <button mat-flat-button  routerLink="/enquire" >Enquire</button>
+    <button mat-button [matMenuTriggerFor]="menu" >
+      <mat-icon>menu</mat-icon>
+    </button>
   </div>
-      <div class="navbar-actions">
+</mat-toolbar>
+<mat-menu xPosition="before" #menu="matMenu">
+  <button mat-button  routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>
+  <button mat-button  routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>
+  <button mat-button  routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</button>
+  <button mat-button  routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>
+  <button mat-flat-button  routerLink="/enquire" >Enquire</button>
+</mat-menu>
 
-        <!-- Add login/logout buttons or user-related actions here -->
-      </div>
-</div>
-</section>
 
+<!--  <button mat-button routerLink="/"><mat-icon>home</mat-icon>menu</button>-->
 
