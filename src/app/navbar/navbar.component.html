@@ -1,9 +1,49 @@
-<a [routerLink] = "'/home'">
-  <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>
-</a>
+
+<!--<a [routerLink] = "'/home'">-->
+<!--  <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>-->
+<!--</a>-->
 <!--<nav>-->
-<button><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></button>
-<button><a routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a></button>
-<button><a routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a></button>
-<button><a routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a></button>
+<!--<button><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></button>-->
+<!--<button><a routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a></button>-->
+<!--<button><a routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a></button>-->
+<!--<button><a routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a></button>-->
+<!--&lt;!&ndash;</nav>&ndash;&gt;-->
+
+<!--<nav class="navbar">-->
+<!--  <div class="navbar-logo">-->
+<!--    <a [routerLink] = "'/home'">-->
+<!--      <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>-->
+<!--    </a>  </div>-->
+<!--  <ul class="navbar-links">-->
+<!--    <li><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>-->
+<!--    <li><a routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a></li>-->
+<!--    <li><a routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a></li>-->
+<!--    <li><a routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a></li>-->
+<!--    <li><a mat-button routerLink="/enquire" routerLinkActive="active" ariaCurrentWhenActive="page">Enquire</a></li>-->
+<!--  </ul>-->
+<!--  <div class="navbar-actions">-->
+<!--    &lt;!&ndash; Add login/logout buttons or user-related actions here &ndash;&gt;-->
+<!--  </div>-->
 <!--</nav>-->
+
+<section>
+  <div class="navbar">
+    <a [routerLink] = "'/home'">
+      <app-logo class = "primary-logo"></app-logo>
+<!--      <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>-->
+    </a>
+  <div class="example-button-row">
+    <a mat-button color="primary" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</a>
+    <a mat-button color="primary"  routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a>
+    <a mat-button color="primary"  routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a>
+    <a mat-button color="primary"  routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a>
+    <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>
+  </div>
+      <div class="navbar-actions">
+
+        <!-- Add login/logout buttons or user-related actions here -->
+      </div>
+</div>
+</section>
+
+

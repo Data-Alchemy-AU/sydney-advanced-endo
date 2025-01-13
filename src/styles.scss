@@ -1,4 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+// Import Angular Material theming utilities
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+// Define custom palettes (optional)
+//$custom-primary: mat.define-palette(mat.);
+//$custom-accent: mat.define-palette(mat.$pink-palette);
+
+// Create a light theme using the palettes
+//$custom-theme: mat.define-light-theme((
+//  color: (
+//    primary: $custom-primary,
+//    accent: $custom-accent,
+//  )
+//));
+
+// Apply the theme globally
+//@include mat.all-component-themes($custom-theme);
+
+//@include mat.all-component-themes($light-theme);
+//
+//.dark-theme {
+//  // This mixin only generates the color styles now.
+//  @include mat.all-component-colors($dark-theme);
+//}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
