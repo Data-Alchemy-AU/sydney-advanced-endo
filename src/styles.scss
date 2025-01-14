@@ -7,5 +7,34 @@
 // Import Angular Material theming utilities
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
-html, body { height: 100%; }
-body { margin: inherit; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  body {
+    font-family: Roboto,
+    "Helvetica Neue", sans-serif;
+    max-width: 1200px; /* Set maximum content width */
+    margin: 0 auto; /* Center the body horizontally */
+    padding: 0 16px; /* Add padding for small screens */
+  }
+}
+
+//.page-container {
+//  max-width: 1200px;
+//  margin: 0 auto;
+//  padding: 0 16px;
+//
+//  @media (max-width: 768px) {
+//    max-width: 100%;
+//    padding: 0 8px;
+//  }
+//}
+
+
+
+
+

@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 16px; /* Add horizontal padding */
+  padding: 24px 16px 16px 0; /* Add horizontal padding */
   height: 100px; /* Adjust height as needed */
   gap: 16px; /* Adds spacing between buttons */
 
@@ -20,17 +20,18 @@
 
   .logo-button {
     display: inline-block; /* Ensures the button wraps tightly around the SVG */
-    //padding: 0; /* Removes any padding around the link */
+    padding: 0; /* Removes any padding around the link */
     border: none; /* Removes any default border */
     text-decoration: none; /* Removes underline from link */
     height: inherit; /* Maintains aspect ratio */
     flex: 0 0 auto;
 
     app-logo {
+      height: inherit;
       display: block;
       cursor: pointer; /* Changes cursor to pointer for better UX */
       overflow: hidden;
-      border: none; /* Removes any default border */
+      border: none;
     }
   }
 

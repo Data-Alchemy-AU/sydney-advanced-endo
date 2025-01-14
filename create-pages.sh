@@ -9,3 +9,4 @@ ng g c PageNotFound
 ng g c navbar
 ng g c footer
 ng g c enquire
+ng g c ImageCarousel
