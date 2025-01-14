@@ -55,14 +55,14 @@
 <!--  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>-->
 <!--</mat-toolbar>-->
 
-<mat-toolbar color="primary" role="heading">
+<mat-toolbar color="primary" class=fixed-header>
   <span>
-  <a mat-button [routerLink] = "'/home'">
+  <a mat-button [routerLink] = "'/home'" class="logo-button">
     <app-logo></app-logo>
   </a>
     </span>
-  <span class="example-spacer"></span>
-  <span>
+  <span class="navbar-separator"></span>
+  <span class="nav-buttons">
     <button mat-button  routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>
     <button mat-button  routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>
     <button mat-button  routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</button>
