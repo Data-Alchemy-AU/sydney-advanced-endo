@@ -1,14 +1,14 @@
-.footer {
-  position: fixed;
-  bottom: 0;
-}
 
 .footer-container {
+  bottom: 0;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
+  padding: 16px 16px; /* Add horizontal padding */
   height: 100px; /* Adjust height as needed */
+  gap: 16px; /* Adds spacing between buttons */
+
 
   //width: 100% !important;
   ////min-height: 70px !important;
@@ -20,10 +20,11 @@
 
   .logo-button {
     display: inline-block; /* Ensures the button wraps tightly around the SVG */
-    padding: 0; /* Removes any padding around the link */
+    //padding: 0; /* Removes any padding around the link */
     border: none; /* Removes any default border */
     text-decoration: none; /* Removes underline from link */
     height: inherit; /* Maintains aspect ratio */
+    flex: 0 0 auto;
 
     app-logo {
       display: block;
@@ -33,20 +34,34 @@
     }
   }
 
-  .footer-right {
-    flex: 1 1 auto;
-    text-align: right;
+  .footer-copywrite {
+    text-align: left;
     font-size: 12px;
-    color: var(primary);
-  }
+    color: #333;
+    //display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distributes the rows evenly within the container */
+    height: 100%;
+    margin: 0;
+    //border: black solid 1px;
 
-  .footer-right a {
-    text-decoration: none;
-    color: #007bff;
-    margin: 0 8px;
-  }
 
-  .footer-right a:hover {
-    text-decoration: underline;
+    p {
+      margin: 0; /* Remove default margin for paragraphs */
+      line-height: 1.5; /* Set a consistent line height */
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+      margin: 0 8px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  .navbar-separator {
+    flex: 1 1 auto;
   }
 }

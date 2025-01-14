@@ -10,12 +10,11 @@
   display: flex;
   align-items: center; /* Center items vertically */
   justify-content: space-between; /* Space logo and buttons apart */
-  padding: 0 16px; /* Add horizontal padding */
-
+  padding: 24px 16px; /* Add horizontal padding */
 
   .logo-button {
     display: inline-block; /* Ensures the button wraps tightly around the SVG */
-    padding: 0; /* Removes any padding around the link */
+    //padding: 0; /* Removes any padding around the link */
     border: none; /* Removes any default border */
     text-decoration: none; /* Removes underline from link */
     height: inherit; /* Maintains aspect ratio */
