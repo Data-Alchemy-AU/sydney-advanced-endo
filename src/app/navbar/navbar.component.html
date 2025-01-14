@@ -55,19 +55,19 @@
 <!--  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>-->
 <!--</mat-toolbar>-->
 
-<mat-toolbar color="primary" class=fixed-header>
-  <span>
-  <a mat-button [routerLink] = "'/home'" class="logo-button">
+<mat-toolbar  class=fixed-header>
+<!--  <span>-->
+  <a mat-button [routerLink] = "'/home'" class="logo-button" color="primary">
     <app-logo></app-logo>
   </a>
-    </span>
-  <span class="navbar-separator"></span>
+<!--  </span>-->
+<!--  <span class="navbar-separator"></span>-->
   <span class="nav-buttons">
-    <button mat-button  routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>
-    <button mat-button  routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>
-    <button mat-button  routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</button>
-    <button mat-button  routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>
-    <button mat-flat-button  routerLink="/enquire" >Enquire</button>
+    <button mat-button routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>
+    <button mat-button routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>
+    <button mat-button routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</button>
+    <button mat-button routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>
+    <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>
 <!--    <button mat-button [matMenuTriggerFor]="menu" >-->
 <!--      <mat-icon>menu</mat-icon>-->
 <!--    </button>-->

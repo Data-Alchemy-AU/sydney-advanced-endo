@@ -1,9 +1,9 @@
-<footer>
-<!--  <div class="primary-logo">-->
-  <div>
-    <a [routerLink] = "'/home'">
-      <app-logo></app-logo>
-<!--    <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>-->
-    </a>
-  </div>
-</footer>
+
+<mat-toolbar  class=fixed-footer>
+  <!--  <span>-->
+  <a mat-button [routerLink] = "'/home'" class="logo-button" color="primary">
+    <app-logo></app-logo>
+  </a>
+  <!--  </span>-->
+  <!--  <span class="navbar-separator"></span>-->
+</mat-toolbar>

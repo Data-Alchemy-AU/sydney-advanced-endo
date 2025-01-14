@@ -1,22 +1,21 @@
 .logo-svg {
   width: 230px;
-  height:70px;
+  height: 70px;
   float: left;
   text-align: left;
-  font-family: arial, sans-serif;
+  font-family: arial, sans-serif !important;
+  //font-family: Roboto, "Helvetica Neue", sans-serif;
   fill: none;
-  transform: scale(1,1);
-}
+  //transform: scale(1,1);
 
-.main {
-  font-family: arial, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  fill: currentcolor;
-}
-.sub {
-  font-family: arial, sans-serif;
-  font-size: 18px;
-  fill: currentcolor;
+  .main {
+    font-size: 24px;
+    font-weight: bold;
+    fill: currentcolor;
+  }
 
+  .sub {
+    font-size: 18px;
+    fill: currentcolor;
+  }
 }

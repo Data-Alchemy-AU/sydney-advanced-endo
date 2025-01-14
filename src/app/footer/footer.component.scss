@@ -1,4 +1,34 @@
-.primary-logo {
-  color: var(--mat-primary-color);
-  fill: var(--mat-primary-color); /* This sets the primary theme color */
+
+.fixed-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100% !important;
+  //min-height: 70px !important;
+  height: 80px !important;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space logo and buttons apart */
+  padding: 0 16px; /* Add horizontal padding */
+
+
+  .logo-button {
+    display: inline-block; /* Ensures the button wraps tightly around the SVG */
+    padding: 0; /* Removes any padding around the link */
+    border: none; /* Removes any default border */
+    text-decoration: none; /* Removes underline from link */
+    height: inherit; /* Maintains aspect ratio */
+
+    app-logo {
+      display: block;
+      cursor: pointer; /* Changes cursor to pointer for better UX */
+      overflow: hidden;
+      border: none; /* Removes any default border */
+    }
+  }
+
+  .navbar-separator {
+    flex: 1 1 auto;
+  }
 }
