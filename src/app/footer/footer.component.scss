@@ -1,17 +1,22 @@
-
-.fixed-footer {
-  position: sticky;
+.footer {
+  position: fixed;
   bottom: 0;
-  left: 0;
-  z-index: 1;
-  width: 100% !important;
-  //min-height: 70px !important;
-  height: 80px !important;
-  display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space logo and buttons apart */
-  padding: 0 16px; /* Add horizontal padding */
+}
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  height: 100px; /* Adjust height as needed */
+
+  //width: 100% !important;
+  ////min-height: 70px !important;
+  //height: 80px !important;
+  //display: flex;
+  //align-items: center; /* Center items vertically */
+  //justify-content: space-between; /* Space logo and buttons apart */
+  //padding: 0 16px; /* Add horizontal padding */
 
   .logo-button {
     display: inline-block; /* Ensures the button wraps tightly around the SVG */
@@ -28,7 +33,20 @@
     }
   }
 
-  .navbar-separator {
+  .footer-right {
     flex: 1 1 auto;
+    text-align: right;
+    font-size: 12px;
+    color: var(primary);
+  }
+
+  .footer-right a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 8px;
+  }
+
+  .footer-right a:hover {
+    text-decoration: underline;
   }
 }
