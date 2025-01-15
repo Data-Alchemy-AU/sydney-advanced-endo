@@ -1,76 +1,100 @@
 
-<!--<a [routerLink] = "'/home'">-->
-<!--  <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>-->
-<!--</a>-->
-<!--<nav>-->
-<!--<button><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></button>-->
-<!--<button><a routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a></button>-->
-<!--<button><a routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a></button>-->
-<!--<button><a routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a></button>-->
-<!--&lt;!&ndash;</nav>&ndash;&gt;-->
 
-<!--<nav class="navbar">-->
-<!--  <div class="navbar-logo">-->
-<!--    <a [routerLink] = "'/home'">-->
-<!--      <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>-->
-<!--    </a>  </div>-->
-<!--  <ul class="navbar-links">-->
-<!--    <li><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>-->
-<!--    <li><a routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a></li>-->
-<!--    <li><a routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a></li>-->
-<!--    <li><a routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a></li>-->
-<!--    <li><a mat-button routerLink="/enquire" routerLinkActive="active" ariaCurrentWhenActive="page">Enquire</a></li>-->
-<!--  </ul>-->
-<!--  <div class="navbar-actions">-->
-<!--    &lt;!&ndash; Add login/logout buttons or user-related actions here &ndash;&gt;-->
+<!--<mat-toolbar  class=fixed-header>-->
+<!--  <span>-->
+<!--  <a mat-button [routerLink] = "'/home'" class="logo-button" color="primary">-->
+<!--    <app-logo></app-logo>-->
+<!--  </a>-->
+<!--&lt;!&ndash;  </span>&ndash;&gt;-->
+<!--&lt;!&ndash;  <span class="navbar-separator"></span>&ndash;&gt;-->
+<!--  <span class="nav-buttons">-->
+<!--    <button mat-button routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>-->
+<!--    <button mat-button routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>-->
+<!--    <button mat-button routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</button>-->
+<!--    <button mat-button routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>-->
+<!--    <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>-->
+<!--&lt;!&ndash;    <button mat-button [matMenuTriggerFor]="menu" >&ndash;&gt;-->
+<!--&lt;!&ndash;      <mat-icon>menu</mat-icon>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--   </span>-->
+<!--</mat-toolbar>-->
+
+<!--<nav class="navbar navbar-expand-lg bg-body-tertiary">-->
+<!--  <div class="container-fluid">-->
+
+<!--    &lt;!&ndash;   Brand &ndash;&gt;-->
+<!--    <a class="navbar-brand" [routerLink] = "'/home'">-->
+<!--      <app-logo></app-logo>-->
+<!--    </a>-->
+
+<!--    &lt;!&ndash;   Burger menu &ndash;&gt;-->
+<!--    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+
+<!--    &lt;!&ndash; Buttons &ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">&ndash;&gt;-->
+<!--&lt;!&ndash;      <ul class="navbar-nav me-auto mb-2 mb-lg-0">&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a class="nav-link active" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</a>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          <button class="btn btn-link" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;          <button  class="btn btn-link" routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;          <button  class="btn btn-link" routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;          <button  class="btn btn-link" routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;          <button  class="btn btn-primary"  routerLink="/enquire" >Enquire</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        </ul>&ndash;&gt;-->
+
+<!--      <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--        <ul class="navbar-nav">-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" routerLink="/about-us">About Us</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" routerLink="/services">Services</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" routerLink="/doctors">Doctors</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" routerLink="/contact-us">Contact Us</a>-->
+<!--          </li>-->
+
+<!--          <button  class="navbar-toggler" type="button"  routerLink="/enquire" >Enquire</button>-->
+<!--        </ul>-->
+<!--    </div>-->
 <!--  </div>-->
 <!--</nav>-->
 
-<!--<section>-->
-<!--  <div class="navbar">-->
-<!--&lt;!&ndash;    <div class="primary-logo">&ndash;&gt;-->
-<!--    <div>-->
-<!--      <a [routerLink] = "'/home'">-->
-<!--        <app-logo ></app-logo>-->
-<!--  &lt;!&ndash;      <img class="brand-logo" ngSrc="/assets/logo.svg" alt="logo" aria-hidden="true" height="100" width="300"/>&ndash;&gt;-->
-<!--      </a>-->
-<!--      </div>-->
-<!--    <div class="example-button-row">-->
-<!--      <a mat-button color="primary" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</a>-->
-<!--      <a mat-button color="primary"  routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a>-->
-<!--      <a mat-button color="primary"  routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</a>-->
-<!--      <a mat-button color="primary"  routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a>-->
-<!--      <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>-->
-<!--    </div>-->
-<!--      <div class="navbar-actions">-->
-
-<!--        &lt;!&ndash; Add login/logout buttons or user-related actions here &ndash;&gt;-->
-<!--      </div>-->
-<!--</div>-->
-<!--</section>-->
-
-<!--<mat-toolbar color="primary">-->
-<!--  <span>Second Line</span>-->
-<!--  <span class="example-spacer"></span>-->
-<!--  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>-->
-<!--</mat-toolbar>-->
-
-<mat-toolbar  class=fixed-header>
-<!--  <span>-->
-  <a mat-button [routerLink] = "'/home'" class="logo-button" color="primary">
-    <app-logo></app-logo>
-  </a>
-<!--  </span>-->
-<!--  <span class="navbar-separator"></span>-->
-  <span class="nav-buttons">
-    <button mat-button routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>
-    <button mat-button routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>
-    <button mat-button routerLink="/doctors" routerLinkActive="active" ariaCurrentWhenActive="page">Doctors</button>
-    <button mat-button routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>
-    <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>
-<!--    <button mat-button [matMenuTriggerFor]="menu" >-->
-<!--      <mat-icon>menu</mat-icon>-->
-<!--    </button>-->
-   </span>
-</mat-toolbar>
-
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
