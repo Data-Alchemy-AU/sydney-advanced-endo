@@ -10,3 +10,4 @@ ng g c navbar
 ng g c footer
 ng g c enquire
 ng g c ImageCarousel
+ng g service ImageCarousel
