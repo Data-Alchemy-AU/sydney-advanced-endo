@@ -22,7 +22,7 @@
   <div [ngStyle]="{'transform': 'translateY('+ transform + '%' +')', 'transition': '.8s'}">
     <div class="text-container">
       <div class="page-text" *ngFor="let i of imageCarouselArray;let select = index;" [ngClass]="{'selected': select == selectedIndex}">
-        <h3>{{i.text}}</h3>
+        <h3>{{i}}</h3>
       </div>
     </div>
   </div>

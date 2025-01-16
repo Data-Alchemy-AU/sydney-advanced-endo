@@ -51,23 +51,30 @@ import {ImageCarouselService} from "../image-carousel.service";
 
 export class ImageCarouselComponent implements OnInit {
   // imageCarouselArray: object[] ;
-  imageCarouselArray: { img: string; alt: string; text: string }[] ;
-
-  transform: number;
+  imageCarouselArray: Result[] = [];
+  transform: number = 100;
   selectedIndex = 0;
 
-  constructor(private items: ImageCarouselService) {
-    this.imageCarouselArray = [];
-    this.selectedIndex = 0;
-    this.transform = 100;
+  constructor(private imageCarouselItems: ImageCarouselService) {
+    this.imageCarouselItems.getAllImageCarouselItems().then((imageCarouselArray: Result[]) => {
+      this.imageCarouselArray = imageCarouselArray;
+      this.selectedIndex = 0;
+      this.transform = 100;
+    });
   }
 
   ngOnInit() {
-    this.items.getItems().subscribe(
-      (result:Result) => {
-        this.imageCarouselArray = result.imageCarouselArray ;
-    });
+    this.imageCarouselItems.getAllImageCarouselItems().then((imageCarouselArray: Result[]) => {
+      this.imageCarouselArray = imageCarouselArray;
+    })
   }
+
+  // ngOnInit() {
+  //   this.imageCarouselItems.getAllImageCarouselItems().subscribe(
+  //     (imageStream:Result[]) => {
+  //       this.imageCarouselArray = imageStream ;
+  //   });
+  // }
 
   selected(x:any) {
     this.downSelected(x);
@@ -79,21 +86,21 @@ export class ImageCarouselComponent implements OnInit {
     this.selectedIndex = x;
   }
 
-  // downSelected(i:any) {
-  //   this.transform =  100 - (i) * 50;
-  //   this.selectedIndex = this.selectedIndex + 1;
-  //   if (this.selectedIndex > 3) {
-  //     this.selectedIndex = 0;
-  //   }
+  downSelected(i:any) {
+    this.transform =  100 - (i) * 50;
+    this.selectedIndex = this.selectedIndex + 1;
+    if (this.selectedIndex > 3) {
+      this.selectedIndex = 0;
+    }
+  }
+
+  // downSelected(index:number){
+  //   this.updateTransform(index);
   // }
-
-  downSelected(index:number){
-    this.updateTransform(index);
-  }
-
-  private updateTransform(index: number) {
-    if (!this.imageCarouselArray.length) return;
-    this.selectedIndex = index % this.imageCarouselArray.length;
-    this.transform = -this.selectedIndex * 100; // Adjust based on slide width
-  }
+  //
+  // private updateTransform(index: number) {
+  //   if (!this.imageCarouselArray.length) return;
+  //   this.selectedIndex = index % this.imageCarouselArray.length;
+  //   this.transform = -this.selectedIndex * 100; // Adjust based on slide width
+  // }
 }
