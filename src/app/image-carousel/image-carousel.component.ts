@@ -77,30 +77,45 @@ export class ImageCarouselComponent implements OnInit {
   // }
 
   selected(x:any) {
-    this.downSelected(x);
+    console.log("Click selected id: ", x);
+    this.incrementSelected(x);
     this.selectedIndex = x;
   }
 
-  keySelected(x:any) {
-    this.downSelected(x);
-    this.selectedIndex = x;
-  }
-
-  downSelected(i:any) {
+  incrementSelected(i:any) {
+    console.log("Original selected: ", this.selectedIndex);
     this.transform =  100 - (i) * 50;
     this.selectedIndex = this.selectedIndex + 1;
-    if (this.selectedIndex > 3) {
+    console.log("Original selected: ", this.selectedIndex);
+    if (this.selectedIndex > this.imageCarouselArray.length - 1) {
       this.selectedIndex = 0;
     }
+    console.log("Selected id: ", i);
   }
+
+
+  // selected(index: number) {
+  //   this.downSelected(index);
+  // }
+  //
+  // keySelected(index: number) {
+  //   this.downSelected(index);
+  // }
+  //
+  // downSelected(index: number) {
+  //   if (!this.imageCarouselArray.length) return;
+  //   this.selectedIndex = index % this.imageCarouselArray.length;
+  //   this.transform = -this.selectedIndex * 100; // Adjust based on slide width
+  // }
+
 
   // downSelected(index:number){
   //   this.updateTransform(index);
   // }
   //
-  // private updateTransform(index: number) {
-  //   if (!this.imageCarouselArray.length) return;
-  //   this.selectedIndex = index % this.imageCarouselArray.length;
-  //   this.transform = -this.selectedIndex * 100; // Adjust based on slide width
-  // }
+  private updateTransform(index: number) {
+    if (!this.imageCarouselArray.length) return;
+    this.selectedIndex = index % (this.imageCarouselArray.length-1);
+    this.transform = -this.selectedIndex * 100; // Adjust based on slide width
+  }
 }
