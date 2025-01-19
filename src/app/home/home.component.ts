@@ -8,7 +8,7 @@ import {ImageCarouselComponent} from "../image-carousel/image-carousel.component
     ImageCarouselComponent
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
 

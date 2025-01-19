@@ -1,121 +1,80 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {NgClass, NgForOf, NgOptimizedImage, NgStyle} from "@angular/common";
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
-import {Result} from './result';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import {Result} from "./result";
 import {ImageCarouselService} from "../image-carousel.service";
 
 @Component({
   selector: 'app-image-carousel',
   standalone: true,
-  imports: [
-    NgOptimizedImage,
-    NgClass,
-    NgStyle,
-    HttpClientModule,
-    NgForOf
-  ],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './image-carousel.component.html',
   styleUrls: ['./image-carousel.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
 })
-
-// export class ImageCarouselComponent {
-//   // imageUrl = './assets/Carousel/image1.jpeg';
-//   // imageAlt = 'Banner image';
-//
-//   slides: string[];
-//   i: number;
-//
-//   constructor() {
-//     this.i = 0;
-//     this.slides = [
-//       './assets/Carousel/image1.jpeg',
-//       './assets/Carousel/image2.jpeg',
-//       './assets/Carousel/image3.jpeg',
-//     ];
-//   }
-//   getSlide() {
-//     return this.slides[this.i];
-//   }
-//
-//   getPrev() {
-//     this.i == 0 ? (this.i = this.slides.length - 1) : this.i--;
-//   }
-//
-//   getNext() {
-//     this.i < this.slides.length - 1 ? this.i++ : (this.i = 0);
-//   }
-// }
-
 
 export class ImageCarouselComponent implements OnInit {
   // imageCarouselArray: object[] ;
-  imageCarouselArray: Result[] = [];
-  transform: number = 100;
-  selectedIndex = 0;
+  slides: Result[] = [];
+  // @Input() slides: any[] = [];
+
+  @Input() indicatorsVisible = true;
+  @Input() animationSpeed = 500;
+  @Input() autoPlay = false;
+  @Input() autoPlaySpeed = 3000;
+  currentSlide = 0;
+  // faArrowRight =  faArrowRight;
+  // faArrowLeft = faArrowLeft;
+  hidden = false;
 
   constructor(private imageCarouselItems: ImageCarouselService) {
-    this.imageCarouselItems.getAllImageCarouselItems().then((imageCarouselArray: Result[]) => {
-      this.imageCarouselArray = imageCarouselArray;
-      this.selectedIndex = 0;
-      this.transform = 100;
-    });
+    // this.imageCarouselItems.getAllImageCarouselItems().then(
+    //   (slides: Result[]) => {
+    //   this.slides = slides;
+    // });
+  }
+
+  next() {
+    if (this.slides.length === 0) return; // Prevent out-of-bounds error
+    let currentSlide = (this.currentSlide + 1) % (this.slides.length);
+    this.jumpToSlide(currentSlide);
+    // console.log("Current slide is %d of %d slides\",this.currentSlide, this.slides.length);
+  }
+
+  previous() {
+    if (this.slides.length === 0) return; // Prevent out-of-bounds error
+
+    let currentSlide =
+      (this.currentSlide - 1) %  (this.slides.length);
+    this.jumpToSlide(currentSlide);
+  }
+
+  jumpToSlide(index: number) {
+    this.hidden = true;
+    setTimeout(() => {
+      this.currentSlide = index;
+      this.hidden = false;
+    }, this.animationSpeed);
   }
 
   ngOnInit() {
-    this.imageCarouselItems.getAllImageCarouselItems().then((imageCarouselArray: Result[]) => {
-      this.imageCarouselArray = imageCarouselArray;
-    })
-  }
 
-  // ngOnInit() {
-  //   this.imageCarouselItems.getAllImageCarouselItems().subscribe(
-  //     (imageStream:Result[]) => {
-  //       this.imageCarouselArray = imageStream ;
-  //   });
-  // }
+    // this.imageCarouselItems.getAllImageCarouselItems().then((slides: Result[]) => {
+    //   this.slides = slides;
+    // })
 
-  selected(x:any) {
-    console.log("Click selected id: ", x);
-    this.incrementSelected(x);
-    this.selectedIndex = x;
-  }
+    this.imageCarouselItems.getAllImageCarouselItems().then((slides: Result[]) => {
+      this.slides = slides;
+      if (slides.length > 0) {
+        this.currentSlide = 0; // Start at the first slide when data is available
+      }
+    }).catch((error) => {
+      console.error("Error fetching slides:", error);
+    });
 
-  incrementSelected(i:any) {
-    console.log("Original selected: ", this.selectedIndex);
-    this.transform =  100 - (i) * 50;
-    this.selectedIndex = this.selectedIndex + 1;
-    console.log("Original selected: ", this.selectedIndex);
-    if (this.selectedIndex > this.imageCarouselArray.length - 1) {
-      this.selectedIndex = 0;
+    if (this.autoPlay) {
+      setInterval(() => {
+        this.next();
+      }, this.autoPlaySpeed);
     }
-    console.log("Selected id: ", i);
-  }
-
-
-  // selected(index: number) {
-  //   this.downSelected(index);
-  // }
-  //
-  // keySelected(index: number) {
-  //   this.downSelected(index);
-  // }
-  //
-  // downSelected(index: number) {
-  //   if (!this.imageCarouselArray.length) return;
-  //   this.selectedIndex = index % this.imageCarouselArray.length;
-  //   this.transform = -this.selectedIndex * 100; // Adjust based on slide width
-  // }
-
-
-  // downSelected(index:number){
-  //   this.updateTransform(index);
-  // }
-  //
-  private updateTransform(index: number) {
-    if (!this.imageCarouselArray.length) return;
-    this.selectedIndex = index % (this.imageCarouselArray.length-1);
-    this.transform = -this.selectedIndex * 100; // Adjust based on slide width
   }
 }

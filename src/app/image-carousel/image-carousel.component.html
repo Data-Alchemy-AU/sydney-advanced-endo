@@ -1,45 +1,35 @@
-<!--<div class="image-container">-->
-<!--  <img [src] = "imageUrl" [alt]="imageAlt"  class = "container_img"/>-->
-<!--</div>-->
+<!--<div class="slides">-->
+<div class="slides" *ngIf="slides.length > 0; else loadingPlaceholder">
+  <div
+    class="slide"
+    [ngStyle]="{
+      'background-image': 'url(' + slides[currentSlide].url + ')',
+      opacity: hidden ? 0 : 1,
+      transition: 'opacity ' + animationSpeed + 'ms ease-in-out'
+    }"
+  ></div>
 
-<!--<div id="carouselExampleControls" class="carousel-container" data-ride="carousel">-->
-<!--  <div class="carousel-item" role="listbox">-->
-<!--    <img src="{{ getSlide() }}" alt="slide" class="carousel-item"/>-->
-<!--  </div>-->
-<!--  -->
-<!--  <button (click)="getPrev()">Prev</button>-->
-
-<!--  <button (click)="getNext()">Next</button>-->
-<!--</div>-->
-
-<div class="container">
-  <div class="img-container"  *ngFor="let i of imageCarouselArray; let select = index;"
-       [ngClass]="{'selected': select == selectedIndex}">
-    <img src="{{i.img}}" alt="{{i.alt}}" class = img-item>
-  </div>
-
-  <div class="slide-button-parent-container"  *ngFor="let i of imageCarouselArray; let x =index" (click)="selected(x)" >
-    <div class="select-box">
-      <div class="slide-button" [ngClass]="{'slide-button-select': x == selectedIndex}" >
-      </div>
+  @if (indicatorsVisible) {
+    <div id="indicators">
+      @for(slide of slides; track $index; ){
+        <div
+          (click)="jumpToSlide($index)"
+          class="indicator"
+          [ngClass]="{ active: $index == currentSlide }"
+        ></div>
+      }
     </div>
-  </div>
+  }
+
+  <button (click)="next()" class="nextButton">
+    <mat-icon fontIcon="faArrowRight"></mat-icon>
+  </button>
+  <button (click)="previous()" class="previousButton">
+    <mat-icon fontIcon="faArrowLeft"></mat-icon>
+  </button>
 </div>
 
-<!--</div>-->
-<!--<div [ngStyle]="{'transform': 'translateY('+ transform + '%' +')', 'transition': '.8s'}">-->
-<!--  <div class="text-container">-->
-<!--    <div class="page-text" *ngFor="let i of imageCarouselArray; let select = index;" [ngClass]="{'selected': select == selectedIndex}">-->
-<!--      <h3>{{i}}</h3>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!--<div class="slider">-->
-<!--  <div class="slide-button-parent-container"  *ngFor="let i of imageCarouselArray; let x =index" (click)="selected(x)" (keydown)="keySelected(x)" >-->
-<!--    <div class="select-box">-->
-<!--      <div class="slide-button" [ngClass]="{'slide-button-select': x == selectedIndex}" >-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
+<!-- ✅ Define the placeholder correctly -->
+<ng-template #loadingPlaceholder>
+  <p>Loading slides...</p> <!-- Placeholder text while loading -->
+</ng-template>

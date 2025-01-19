@@ -1,5 +1,5 @@
 export interface Result {
-  'img': string;
+  'url': string;
   'alt': string;
   'text': string;
 }
