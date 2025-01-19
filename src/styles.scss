@@ -1,11 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
-
-/* Importing Bootstrap SCSS file. */
-//@import 'bootstrap/scss/bootstrap';
+@include mat.core(); // Initializes Material theming
 
 // Import Angular Material theming utilities
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+//@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 html, body {
   margin: 0;
@@ -23,16 +21,6 @@ html, body {
   }
 }
 
-//.page-container {
-//  max-width: 1200px;
-//  margin: 0 auto;
-//  padding: 0 16px;
-//
-//  @media (max-width: 768px) {
-//    max-width: 100%;
-//    padding: 0 8px;
-//  }
-//}
 
 
 
