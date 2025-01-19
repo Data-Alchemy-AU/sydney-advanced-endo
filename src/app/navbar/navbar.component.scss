@@ -38,5 +38,7 @@
     justify-content: space-between; /* Centers the buttons horizontally */
     align-items: center; /* Aligns buttons vertically */
     flex-wrap: wrap; /* Allows buttons to wrap if needed */
+    cursor: pointer; /* Changes cursor to pointer for better UX */
+
   }
 }
