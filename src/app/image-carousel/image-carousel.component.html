@@ -22,14 +22,13 @@
   }
 
   <button (click)="next()" class="nextButton">
-    <mat-icon fontIcon="faArrowRight"></mat-icon>
+    <mat-icon aria-hidden="false" aria-label="previous slide" fontIcon="navigate_next"></mat-icon>
   </button>
   <button (click)="previous()" class="previousButton">
-    <mat-icon fontIcon="faArrowLeft"></mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Next slide" fontIcon="navigate_before"></mat-icon>
   </button>
 </div>
 
-<!-- ✅ Define the placeholder correctly -->
 <ng-template #loadingPlaceholder>
   <p>Loading slides...</p> <!-- Placeholder text while loading -->
 </ng-template>
