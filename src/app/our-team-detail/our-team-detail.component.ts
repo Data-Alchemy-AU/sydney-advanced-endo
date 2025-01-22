@@ -27,7 +27,7 @@ export class OurTeamDetailComponent {
       });
 
     if (!this.profile) {
-      console.error('Housing location not found!');
+      console.error('Profile not found!');
     }
   }
 }
