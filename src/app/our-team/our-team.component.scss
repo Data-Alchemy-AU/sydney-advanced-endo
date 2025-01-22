@@ -1,0 +1,40 @@
+
+.profile-list {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  //grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  //grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+  //justify-content: center; // Ensures centering when items are alone
+  align-items: center;
+  //grid-auto-flow: row; // Forces items to fill each row properly
+
+  //&:has(:only-child) {
+  //  grid-column: span 1;
+  //  justify-content: center;
+  //  align-items: center;
+  //}
+
+  /* Center the last row when it has 1 or 2 items */
+  //> *:nth-last-child(-n+2) {
+  //  justify-self: center;
+  //}
+
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+}
+@media (max-width: 499px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+}

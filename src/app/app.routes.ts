@@ -6,6 +6,7 @@ import {ContactUsComponent} from "./contact-us/contact-us.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {EnquireComponent} from "./enquire/enquire.component";
 import {OurTeamComponent} from "./our-team/our-team.component";
+import {OurTeamDetailComponent} from "./our-team-detail/our-team-detail.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ export const routes: Routes = [
   { path: 'our-team', component: OurTeamComponent },
   { path: 'contact-us', component: ContactUsComponent},
   { path: 'enquire', component: EnquireComponent},
+  {path: 'our-team-detail/:id', component: OurTeamDetailComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

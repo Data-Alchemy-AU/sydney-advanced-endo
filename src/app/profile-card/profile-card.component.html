@@ -1,0 +1,23 @@
+<!--<section class="profile-card"  [routerLink]="['/details', profile.id]">-->
+<!--  <img-->
+<!--    class="profile-card-photo"-->
+<!--    [src]="profile.url"-->
+<!--    alt="Exterior photo of {{ profile.title }} {{ profile.firstname}} {{ profile.lastname}}"-->
+<!--    crossorigin-->
+<!--  />-->
+<!--  <h2 class="profile-card-heading"> {{ profile.title }} {{ profile.firstname}} {{ profile.lastname}}</h2>-->
+<!--  <p class="profile-card-description"> {{ profile.pos }}, {{ profile.qual }}</p>-->
+<!--</section>-->
+<div class="profile-card">
+<mat-card class = "profile-card-align-middle" [routerLink]="['/our-team-detail', profile.id]">
+  <mat-card-header>
+    <img mat-card-xl-image class = "profile-card-image" [src]="profile.url" alt="Exterior photo of {{ profile.title }} {{ profile.firstname}} {{ profile.lastname}}" crossorigin>
+  </mat-card-header>
+<!--  <mat-card-header>-->
+    <mat-card-title-group>
+      <mat-card-title>{{ profile.title }} {{ profile.firstname}} {{ profile.lastname}}</mat-card-title>
+      <mat-card-subtitle>{{ profile.pos }}, {{ profile.qual }}</mat-card-subtitle>
+          </mat-card-title-group>
+<!--        </mat-card-header>-->
+      </mat-card>
+</div>

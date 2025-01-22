@@ -16,3 +16,9 @@ ng g c About-Us-summary
 ng g c our-team-summary
 ng g c services-summary
 ng g c contact-us-summary
+ng g c our-team-detail
+ng g c profile-card
+
+ng g service ProfileService
+
+

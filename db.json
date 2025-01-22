@@ -4,7 +4,7 @@
     {"url": "./assets/Carousel/image2.jpeg", "alt": "", "text": "Sydney Advanced Endocrinology"},
     {"url": "./assets/Carousel/image3.jpeg", "alt": "", "text": "Sydney Advanced Endocrinology"}
   ],
-  "ourPeople":
+  "profiles":
   [
     {"title": "Dr",
       "firstname": "Bruce",

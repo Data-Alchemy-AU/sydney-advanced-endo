@@ -1,1 +1,6 @@
-<p>our-team works!</p>
+<section class="profile-list">
+  <app-profile-card
+    *ngFor="let profile of profileList"
+    [profile]="profile"
+  ></app-profile-card>
+</section>

@@ -1,0 +1,17 @@
+<article>
+  <img class = 'profile-detail-image'
+    [src]="profile?.url"
+    alt="Exterior photo of {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}"
+    crossorigin
+  />
+  <section>
+    <h2 > {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}</h2>
+    <p > {{ profile?.pos }} , {{ profile?.qual }}</p>
+  </section>
+  <section >
+    <h2 >About {{ profile?.title }} {{ profile?.lastname}}</h2>
+    <p >{{ profile?.desc }}
+  </section>
+</article>
+
+

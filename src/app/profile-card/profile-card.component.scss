@@ -1,0 +1,46 @@
+.profile-card {
+  display: flex;
+  justify-content: center;
+
+  &-align-middle {
+    align-items: center;
+    max-width: 300px;
+    //margin-bottom: 10px;
+    padding: 8px; // Adds spacing between child elements
+  }
+
+  &-image {
+    width: inherit;
+    max-height: 300px;
+  }
+}
+
+//.profile-card {
+//  background-color: var(--mat-badge-background-color);
+//  border-radius: 30px;
+//  padding-bottom: 30px;
+//
+//  &-heading {
+//    background-color: var(--mat-badge-text-color);
+//    padding: 10px 20px 0 20px;
+//  }
+//
+//  &-photo {
+//    height: 300px;
+//    width: 100%;
+//    object-fit: cover;
+//    border-radius: 30px 30px 0 0;
+//  }
+//
+//  a {
+//    padding-left: 20px;
+//    text-decoration: none;
+//    color: var(--mat-badge-background-color);
+//  ;
+//
+//    &::after {
+//      content: "\203A";
+//      margin-left: 5px;
+//    }
+//  }
+//}
