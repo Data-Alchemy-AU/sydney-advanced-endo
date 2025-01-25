@@ -3,13 +3,15 @@ import {ActivatedRoute} from "@angular/router";
 import {ProfileService} from "../profile.service";
 import {Profile} from "../profile";
 import {CommonModule} from "@angular/common";
+import {ButtonContactEnquireComponent} from "../button-contact-enquire/button-contact-enquire.component";
 
 
 @Component({
-    selector: 'app-our-team-detail',
-    imports: [CommonModule],
-    templateUrl: './our-team-detail.component.html',
-    styleUrl: './our-team-detail.component.scss'
+  selector: 'app-our-team-detail',
+  imports: [CommonModule, ButtonContactEnquireComponent],
+  templateUrl: './our-team-detail.component.html',
+  standalone: true,
+  styleUrl: './our-team-detail.component.scss'
 })
 
 export class OurTeamDetailComponent {

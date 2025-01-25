@@ -18,6 +18,7 @@ ng g c services-summary
 ng g c contact-us-summary
 ng g c our-team-detail
 ng g c profile-card
+ng g c button-contact-enquire
 
 ng g service ProfileService
 
