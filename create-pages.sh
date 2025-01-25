@@ -21,4 +21,5 @@ ng g c profile-card
 
 ng g service ProfileService
 
-
+json-server --watch db.json
+ng serve
