@@ -1,18 +1,58 @@
-<article>
-  <img class = 'profile-detail-image'
-    [src]="profile?.url"
-    alt="Exterior photo of {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}"
-    crossorigin
-  />
-  <section>
+<!--<article>-->
+<!--  <div class = profile-detail-button-container>-->
+<!--    <button mat-flat-button color="primary">Back to Doctors</button>-->
+<!--  </div>-->
+
+<div class = "profile-detail-container">
+  <div class = 'profile-detail-header'>
     <h2 > {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}</h2>
     <p > {{ profile?.pos }} , {{ profile?.qual }}</p>
-  </section>
-  <section >
+
+    <div class = button-container>
+        <button mat-flat-button class="button-container-back" color="primary">Back to Doctors</button>
+      </div>
+  </div>
+  <div class = 'profile-detail-content'>
     <h2 >About {{ profile?.title }} {{ profile?.lastname}}</h2>
     <p >{{ profile?.desc }}
-  </section>
-  <app-button-contact-enquire></app-button-contact-enquire>
-</article>
+    <div >
+      <app-button-contact-enquire></app-button-contact-enquire>
+    </div>
+  </div>
 
 
+  <div class = 'profile-detail-image-container'>
+    <img class = 'profile-detail-image'
+         [src]="profile?.url"
+         alt="Exterior photo of {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}"
+         crossorigin
+    />
+  </div>
+<!--</article>-->
+<!--<div class = "profile-detail">-->
+<!--  <div>-->
+<!--    <mat-card class = "profile-detail-header">-->
+<!--      <mat-card-header>-->
+<!--      <mat-card-title-group>-->
+<!--        <mat-card-title>{{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}</mat-card-title>-->
+<!--        <mat-card-subtitle>{{ profile?.pos }}, {{ profile?.qual }}</mat-card-subtitle>-->
+<!--      </mat-card-title-group>-->
+<!--      </mat-card-header>-->
+<!--    </mat-card>-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <mat-card class = "profile-detail-image">-->
+<!--      <img mat-card-image [src]="profile?.url"   alt="Exterior photo of {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}"-->
+<!--           crossorigin>-->
+<!--    </mat-card>-->
+<!--  </div>-->
+
+<!--  <div >-->
+<!--    <mat-card class >-->
+<!--      <mat-card-content>-->
+<!--        <p>{{ profile?.desc }}</p>-->
+<!--      </mat-card-content>-->
+<!--    </mat-card>-->
+<!--  </div>-->
+<!--</div>-->

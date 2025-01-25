@@ -7,6 +7,7 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {EnquireComponent} from "./enquire/enquire.component";
 import {OurTeamComponent} from "./our-team/our-team.component";
 import {OurTeamDetailComponent} from "./our-team-detail/our-team-detail.component";
+import {TestComponent} from "./test/test.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,4 +19,6 @@ export const routes: Routes = [
   {path: 'our-team-detail/:id', component: OurTeamDetailComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
+  {path: 'test', component: TestComponent},
+
 ];

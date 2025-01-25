@@ -3,12 +3,17 @@ import {ActivatedRoute} from "@angular/router";
 import {ProfileService} from "../profile.service";
 import {Profile} from "../profile";
 import {CommonModule} from "@angular/common";
-import {ButtonContactEnquireComponent} from "../button-contact-enquire/button-contact-enquire.component";
 
+import {MatGridListModule} from "@angular/material/grid-list";
+import {
+  MatCardModule,
+} from "@angular/material/card";
+import {ButtonContactEnquireComponent} from "../button-contact-enquire/button-contact-enquire.component";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-our-team-detail',
-  imports: [CommonModule, ButtonContactEnquireComponent],
+  imports: [CommonModule, MatGridListModule, MatCardModule, ButtonContactEnquireComponent, MatButtonModule],
   templateUrl: './our-team-detail.component.html',
   standalone: true,
   styleUrl: './our-team-detail.component.scss'

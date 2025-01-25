@@ -1,17 +1,113 @@
-.profile-detail {
+//.profile-detail {
+//
+//  &-image {
+//    height: 600px;
+//    width: 30%;
+//    object-fit: cover;
+//    border-radius: 30px;
+//    float: right;
+//  }
+//
+//  &-button-container {
+//    float: right;
+//
+//    //&-back{
+//    //  float: right;
+//    //}
+//  }
+//}
+//
+//@media (max-width: 1024px) {
+//  .profile-detail-image {
+//    height: 400px;
+//    width: 100%;
+//  }
+//}
 
-  &-image {
-    height: 600px;
-    width: 30%;
-    object-fit: cover;
-    border-radius: 30px;
-    float: right;
+//profile-detail {
+//  display: grid;
+//  grid-template-columns: repeat(2, 1fr);
+//  gap: 10px;
+//
+//  &-header {
+//    width: 100%;
+//  }
+//
+//  &-image {
+//        height: 600px;
+//        width: 30%;
+//        object-fit: cover;
+//        border-radius: 30px;
+//        float: right;
+//      }
+//
+//@media (max-width: 1024px) {
+//  .profile-detail-image {
+//    height: 400px;
+//    width: 100%;
+//  }
+//}
+//}
+
+.profile-detail-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  place-content: start;
+  border: red solid 1px;
+
+  .profile-detail-header {
+    grid-column: span 2;
+    border: green solid 1px;
   }
-}
 
-@media (max-width: 1024px) {
-  .profile-detail-image {
-    height: 400px;
-    width: 100%;
+  .button-container {
+
+    &-back {
+      float: right;
+    }
+  }
+
+  .profile-detail-image-container {
+    //grid-column: 2/2;
+    //grid-row:2/2;
+    border: blue solid 1px;
+
+    .profile-detail-image {
+      height: 600px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 30px;
+      //float: right;
+      border: blue solid 1px;
+    }
+  }
+
+  .profile-detail-content {
+    //grid-column: 1/1;
+    //grid-row:2/2;
+    border: blue solid 1px;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+
+    .profile-detail-header {
+      border: green solid 1px;
+    }
+
+    .button-container {
+
+      &-back {
+      }
+    }
+    .profile-detail-image-container {
+      order: -1; /* Moves image to the top */
+      .profile-detail-image {
+        height: 400px;
+        width: 100%;
+      }
+    }
   }
 }
