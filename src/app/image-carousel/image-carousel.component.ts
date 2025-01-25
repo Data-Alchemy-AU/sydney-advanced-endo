@@ -5,11 +5,10 @@ import {Result} from "./result";
 import {ImageCarouselService} from "../image-carousel.service";
 
 @Component({
-  selector: 'app-image-carousel',
-  standalone: true,
-  imports: [CommonModule, MatIconModule],
-  templateUrl: './image-carousel.component.html',
-  styleUrls: ['./image-carousel.component.scss'],
+    selector: 'app-image-carousel',
+    imports: [CommonModule, MatIconModule],
+    templateUrl: './image-carousel.component.html',
+    styleUrls: ['./image-carousel.component.scss']
 })
 
 export class ImageCarouselComponent implements OnInit {

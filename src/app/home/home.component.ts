@@ -6,18 +6,17 @@ import {OurTeamSummaryComponent} from "../our-team-summary/our-team-summary.comp
 import {ContactUsSummaryComponent} from "../contact-us-summary/contact-us-summary.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    ImageCarouselComponent,
-    MatGridList,
-    MatGridTile,
-    AboutUsSummaryComponent,
-    OurTeamSummaryComponent,
-    ContactUsSummaryComponent,
-  ],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    imports: [
+        ImageCarouselComponent,
+        MatGridList,
+        MatGridTile,
+        AboutUsSummaryComponent,
+        OurTeamSummaryComponent,
+        ContactUsSummaryComponent,
+    ],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
 

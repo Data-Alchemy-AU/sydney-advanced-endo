@@ -5,13 +5,12 @@ import {MatAnchor, MatButton} from "@angular/material/button";
 import {MatToolbar} from "@angular/material/toolbar";
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [
-    RouterOutlet, RouterLink, RouterLinkActive, LogoComponent, MatAnchor, MatButton, MatToolbar
-  ],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+    selector: 'app-footer',
+    imports: [
+        RouterOutlet, RouterLink, RouterLinkActive, LogoComponent, MatAnchor, MatButton, MatToolbar
+    ],
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
 }

@@ -5,11 +5,10 @@ import {CommonModule} from "@angular/common";
 import {MatCardModule} from "@angular/material/card";
 
 @Component({
-  selector: 'app-profile-card',
-  standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet, MatCardModule],
-  templateUrl: './profile-card.component.html',
-  styleUrls: ['./profile-card.component.scss']
+    selector: 'app-profile-card',
+    imports: [CommonModule, RouterLink, RouterOutlet, MatCardModule],
+    templateUrl: './profile-card.component.html',
+    styleUrls: ['./profile-card.component.scss']
 })
 export class ProfileCardComponent {
   @Input() profile!: Profile;

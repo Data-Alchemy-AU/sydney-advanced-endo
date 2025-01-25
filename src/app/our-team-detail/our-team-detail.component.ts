@@ -6,11 +6,10 @@ import {CommonModule} from "@angular/common";
 
 
 @Component({
-  selector: 'app-our-team-detail',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './our-team-detail.component.html',
-  styleUrl: './our-team-detail.component.scss'
+    selector: 'app-our-team-detail',
+    imports: [CommonModule],
+    templateUrl: './our-team-detail.component.html',
+    styleUrl: './our-team-detail.component.scss'
 })
 
 export class OurTeamDetailComponent {

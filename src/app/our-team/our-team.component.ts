@@ -5,13 +5,12 @@ import {ProfileService} from "../profile.service";
 import {CommonModule} from "@angular/common";
 
 @Component({
-  selector: 'app-our-team',
-  standalone: true,
-  imports: [
-    ProfileCardComponent, CommonModule
-  ],
-  templateUrl: './our-team.component.html',
-  styleUrl: './our-team.component.scss'
+    selector: 'app-our-team',
+    imports: [
+        ProfileCardComponent, CommonModule
+    ],
+    templateUrl: './our-team.component.html',
+    styleUrl: './our-team.component.scss'
 })
 export class OurTeamComponent {
 
