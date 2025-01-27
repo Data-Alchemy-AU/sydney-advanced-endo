@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink, RouterLinkActive} from "@angular/router";
 import {ProfileService} from "../profile.service";
 import {Profile} from "../profile";
 import {CommonModule} from "@angular/common";
@@ -13,7 +13,7 @@ import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-our-team-detail',
-  imports: [CommonModule, MatGridListModule, MatCardModule, ButtonContactEnquireComponent, MatButtonModule],
+  imports: [CommonModule, MatGridListModule, MatCardModule, ButtonContactEnquireComponent, MatButtonModule, RouterLink, RouterLinkActive],
   templateUrl: './our-team-detail.component.html',
   standalone: true,
   styleUrl: './our-team-detail.component.scss'

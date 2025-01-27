@@ -1,1 +1,7 @@
-<p>services works!</p>
+<section class="service-list">
+  <app-service-card
+    class = app-service-card
+    *ngFor="let service of serviceList"
+    [service]="service"
+  ></app-service-card>
+</section>

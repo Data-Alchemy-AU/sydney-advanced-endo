@@ -5,16 +5,18 @@
 
 <div class = "profile-detail-container">
   <div class = 'profile-detail-header'>
-    <h2 > {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}</h2>
-    <p > {{ profile?.pos }} , {{ profile?.qual }}</p>
-
+    <div>
+      <h2 > {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}</h2>
+      <p > {{ profile?.pos }} , {{ profile?.qual }}</p>
+    </div>
     <div class = button-container>
-        <button mat-flat-button class="button-container-back" color="primary">Back to Doctors</button>
+        <button mat-flat-button routerLink="/our-team" routerLinkActive="active" ariaCurrentWhenActive="page" class="button-container-back" color="primary">Back to Doctors</button>
       </div>
   </div>
   <div class = 'profile-detail-content'>
     <h2 >About {{ profile?.title }} {{ profile?.lastname}}</h2>
     <p >{{ profile?.desc }}
+    </p>
     <div >
       <app-button-contact-enquire></app-button-contact-enquire>
     </div>
@@ -23,7 +25,7 @@
 
   <div class = 'profile-detail-image-container'>
     <img class = 'profile-detail-image'
-         [src]="profile?.url"
+         src="profile?.url"
          alt="Exterior photo of {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}"
          crossorigin
     />
@@ -55,4 +57,4 @@
 <!--      </mat-card-content>-->
 <!--    </mat-card>-->
 <!--  </div>-->
-<!--</div>-->
+</div>

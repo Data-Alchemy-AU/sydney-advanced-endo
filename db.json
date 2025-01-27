@@ -29,5 +29,38 @@
       "qual": "M.D., Ph.D",
       "desc": "Dr. Otto Octavius is a groundbreaking scientist and surgeon specializing in biomechanics and cybernetic enhancements. Once a respected researcher in atomic physics, a laboratory accident fused his advanced mechanical arms to his body, giving him unmatched precision and strength. With a mind as brilliant as his inventions, Dr. Octavius offers cutting-edge treatments in robotic-assisted surgery and neural interface technology. While his methods may sometimes challenge conventional ethics, his expertise in pushing the boundaries of human augmentation remains unparalleled. Patients seeking revolutionary solutions in prosthetics and cybernetics need look no further than Dr. Octavius' visionary approach to medicine.",
       "url": "./assets/Doctors/Octopus.jpeg"}
+  ],
+
+  "services": [
+    {
+      "name": "Stimpak",
+      "desc": "A fast-acting medical treatment that accelerates wound healing and restores vitality.",
+      "url": "./assets/Services/adrenal-gland.png"
+    },
+    {
+      "name": "RadAway",
+      "desc": "A powerful detox agent designed to flush out harmful radiation from the body.",
+      "url": "./assets/Services/ovary.png"
+    },
+    {
+      "name": "Doctors Bag",
+      "desc": "A comprehensive medical kit containing essential tools for treating injuries and ailments.",
+      "url": "./assets/Services/pituitary.png"
+    },
+    {
+      "name": "Med-X",
+      "desc": "A potent painkiller that numbs pain and boosts resistance to physical damage.",
+      "url": "./assets/Services/testicle.png"
+    },
+    {
+      "name": "Rad-X",
+      "desc": "A preventative treatment that enhances radiation resistance before exposure.",
+      "url": "./assets/Services/thyroid-gland.png"
+    },
+    {
+      "name": "PartyTime Mentats",
+      "desc": "A cognitive enhancer that sharpens focus and boosts charisma for social situations.",
+      "url": "./assets/Services/hormonal-imbalance.png"
+    }
   ]
 }

@@ -56,14 +56,24 @@
   border: red solid 1px;
 
   .profile-detail-header {
+    width: 100%;
+    display: inline-flex;
+    align-content: space-between;
     grid-column: span 2;
     border: green solid 1px;
+    flex-wrap: wrap; /* Allows buttons to wrap if needed */
+
+    .navbar-separator {
+      flex: 1 1 auto;
+    }
   }
 
   .button-container {
-
+    justify-self: right;
+    border: orangered solid 1px;
     &-back {
-      float: right;
+      cursor: pointer; /* Changes cursor to pointer for better UX */
+      //float: right;
     }
   }
 
