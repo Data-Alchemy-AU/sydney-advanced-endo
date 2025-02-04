@@ -1,4 +1,4 @@
-import { ApplicationConfig } from '@angular/core';
+import {ApplicationConfig, importProvidersFrom} from '@angular/core';
 import { provideRouter , Routes} from '@angular/router';
 import {provideClientHydration, provideProtractorTestingSupport} from '@angular/platform-browser';
 import {routes} from "./app.routes";

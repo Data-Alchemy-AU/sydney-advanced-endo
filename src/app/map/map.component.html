@@ -1,0 +1,25 @@
+<!--<google-map [options]="options" />-->
+<!--<google-map [center]="center" [zoom]="zoom" />-->
+<!--<script async-->
+<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAorirqFuc79MmZhKnZ7Q1NXUZ6o4l9I-k&loading=async&callback=initMap">-->
+<!--</script>-->
+<!--<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAorirqFuc79MmZhKnZ7Q1NXUZ6o4l9I-k&callback=console.debug&libraries=maps,marker&v=beta">-->
+
+<div *ngIf="apiLoaded | async" fxFill >
+<google-map
+  height="400px"
+  width="750px"
+  [options]="mapOptions"
+  (mapInitialized)="onMapReady($event)">
+  <map-marker [position]= "marker"
+  ></map-marker>
+  </google-map>
+<!--  (mapClick)="moveMap($event)"-->
+<!--  (mapMousemove)="move($event)">-->
+  <!--  [center]="center"-->
+  <!--  [zoom]="zoom"-->
+</div>
+
+<!--<div>Latitude: {{display?.lat}}</div>-->
+<!--<div>Longitude: {{display?.lng}}</div>-->
+

@@ -20,12 +20,18 @@ ng g c our-team-detail
 ng g c profile-card
 ng g c service-card
 ng g c button-contact-enquire
+ng g c map
+
 
 ng g service Profile
 ng g service Services
 
 json-server --watch db.json
 ng serve
+
+npm install @angular/google-maps
+
+
 
 #<a href="https://www.flaticon.com/free-icons/thyroid-gland" title="thyroid-gland icons">Thyroid-gland icons created by Vitaly Gorbachev - Flaticon</a>
 #<a href="https://www.flaticon.com/free-icons/testies" title="testies icons">Testies icons created by HAJICON - Flaticon</a>
