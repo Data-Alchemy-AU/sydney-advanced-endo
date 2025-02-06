@@ -1,23 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {Profile} from "./profile";
+import {environment} from "../environments/environment";
+import {catchError, Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProfileService {
 
-  private url = 'http://localhost:3000/profiles';
+  private url = `${environment.apiUrl}/profiles`;
 
-  constructor(private http: HttpClient) {}
-
-  async getAllProfiles(): Promise<Profile[]> {
-    const data = await fetch(this.url);
-    return (await data.json()) ?? [];
+  constructor(private http: HttpClient) {
   }
 
-  async getProfileById(id: number): Promise<Profile| undefined> {
-    const data = await fetch(`${this.url}/${id}`);
-    return (await data.json()) ?? {};
+  getAllProfiles(): Observable<Profile[]> {
+    return this.http.get<Profile[]>(this.url).pipe(
+      catchError(error => {
+        console.error('Error fetching staff profile details:', error);
+        return of([]); // Return an empty array if API fails
+      })
+    );
+  }
+
+  getProfileById(id: number): Observable<Profile | undefined> {
+    return this.http.get<Profile>(`${this.url}/${id}`).pipe(
+      catchError(error => {
+        console.error(`Error fetching image ${id}: `, error);
+        return of(undefined); // Return an empty array if API fails
+      })
+    );
   }
 }

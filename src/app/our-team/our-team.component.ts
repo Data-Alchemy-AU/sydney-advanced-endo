@@ -18,9 +18,14 @@ export class OurTeamComponent {
   profileList: Profile[] = [];
   constructor() {
 
-    this.profileService.getAllProfiles().then(
-      (profileList: Profile[]) => {
-        this.profileList = profileList;
+    this.profileService.getAllProfiles()
+      .subscribe({
+        next: (profileList: Profile[]) => {
+          this.profileList = profileList;
+        },
+        error: (error) => {
+          console.error("Error fetching profiles:", error);
+        }
       });
   }
 }

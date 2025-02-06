@@ -27,13 +27,14 @@ export class OurTeamDetailComponent {
   constructor() {
     const profileId = this.route.snapshot.params['id'];
     console.log(profileId);
-    this.profileService.getProfileById(profileId).then(
-      (profile) => {
-        this.profile = profile
-      });
-
-    if (!this.profile) {
-      console.error('Profile not found!');
-    }
+    this.profileService.getProfileById(profileId)
+      .subscribe({
+        next: (profile) => {
+          this.profile = profile
+      },
+        error: (error) => {
+          console.error('Profile not found!');
+        }
+    });
   }
 }

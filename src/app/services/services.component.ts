@@ -16,11 +16,17 @@ import {ServiceCardComponent} from "../service-card/service-card.component";
 export class ServicesComponent {
   serviceService = inject(ServicesService);
   serviceList: Service[] = [];
+
   constructor() {
 
-    this.serviceService.getAllServices().then(
-      (profileList: Service[]) => {
-        this.serviceList = profileList;
+    this.serviceService.getAllServices()
+      .subscribe({
+        next: (profileList: Service[]) => {
+          this.serviceList = profileList;
+        },
+        error: (error) => {
+          console.error("Error fetching services:", error);
+        }
       });
   }
 }

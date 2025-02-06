@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import {Result} from "./result";
 import {ImageCarouselService} from "../image-carousel.service";
+import {error} from "@angular/compiler-cli/src/transformers/util";
 
 @Component({
   selector: 'app-image-carousel',
@@ -26,12 +27,7 @@ export class ImageCarouselComponent implements OnInit {
   // faArrowLeft = faArrowLeft;
   hidden = false;
 
-  constructor(private imageCarouselItems: ImageCarouselService) {
-    // this.imageCarouselItems.getAllImageCarouselItems().then(
-    //   (slides: Result[]) => {
-    //   this.slides = slides;
-    // });
-  }
+  constructor(private imageCarouselItems: ImageCarouselService) {}
 
   next() {
     if (this.slides.length === 0) return; // Prevent out-of-bounds error
@@ -80,54 +76,22 @@ export class ImageCarouselComponent implements OnInit {
     }
   }
 
-
-  // ngOnInit() {
-  //
-  //   this.imageCarouselItems.getAllImageCarouselItems().then((slides: Result[]) => {
-  //     this.slides = slides;
-  //   })
-  //
-  //   if (this.autoPlay) {
-  //     setInterval(() => {
-  //       this.next();
-  //     }, this.autoPlaySpeed);
-  //   }
-  //
-  //   this.imageCarouselItems.getAllImageCarouselItems().then((slides: Result[]) => {
-  //     this.slides = slides;
-  //     if (slides.length > 0) {
-  //       this.currentSlide = 0; // Start at the first slide when data is available
-  //     }
-  //   }).catch(error => {
-  //     console.error("Error fetching slides: ", error);
-  //   });
-  //
-  //   if (this.autoPlay) {
-  //     setInterval(() => {
-  //       this.next();
-  //     }, this.autoPlaySpeed);
-  //   }
-  // }
-
   ngOnInit() {
     this.imageCarouselItems.getAllImageCarouselItems()
-      .then((slides: Result[]) => {
+      .subscribe({
+        next: (slides: Result[]) => {
         this.slides = slides;
         if (slides.length > 0) {
           this.currentSlide = 0;
 
           // **Start auto-play only after data is loaded**
           this.startAutoPlay(); // Start auto-play initially
-          // if (this.autoPlay && !this.autoPlayInterval) {
-          //   this.autoPlayInterval = setInterval(() => {
-          //     this.next();
-          //   }, this.autoPlaySpeed);
-          // }
         }
-      })
-      .catch(error => {
+      },
+      error: (error) => {
         console.error("Error fetching slides:", error);
-      });
+      }
+    });
   }
 
   ngOnDestroy() {

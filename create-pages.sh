@@ -21,7 +21,8 @@ ng g c profile-card
 ng g c service-card
 ng g c button-contact-enquire
 ng g c map
-
+ng generate environments
+ng g c demomap
 
 ng g service Profile
 ng g service Services
