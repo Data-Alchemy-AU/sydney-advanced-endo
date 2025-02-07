@@ -3,58 +3,34 @@
 @include mat.elevation-classes();
 @include mat.app-background(); // Initializes Material theming
 
-// Import Angular Material theming utilities
-//@import '@angular/material/prebuilt-themes/indigo-pink.css';
-// Enable CSS variables for Material colors
+html {
 
-//
-//$primary: mat.define-palette(mat.$indigo-palette, 500);
-//$accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-//
-//// The "warn" palette is optional and defaults to red if not specified.
-//$warn: mat.define-palette(mat.$red-palette);
+  // light and dark mode support
+  color-scheme: light dark;
 
-//$standard-syd-adv-endo: mat.define-light-theme((
-//  color: (
-//    primary: $primary,
-//    accent: $accent,
-//    warn: $warn,
-//  ),
-//  typography: mat.define-typography-config(),
-//  density: 0,
-//));
+  @include mat.theme((
 
-//body {
-//  background: var(--mat-sys-surface);
-//  color: var(--mat-sys-on-surface);
-//}
+    // colours
+    color: mat.$violet-palette,
 
-// include style per component here
-//@include mat.core-theme($standard-syd-adv-endo);
-//@include mat.button-theme($standard-syd-adv-endo);
+    // fonts
+    typography: (
+      plain-family: Roboto,
+      brand-family: Open Sans,
+      bold-weight: 900,
+      medium-weight: 500,
+      regular-weight: 300,
+    ),
 
-//includes styles for all components in the library
-//@include mat.all-component-themes($standard-syd-adv-endo);
+    // spacing of components. Default: 0
+    density: 0
+  ));
+}
 
-//:root {
-//  @include mat.all-component-themes($standard-syd-adv-endo);
-//}
-//html, body {
-//  margin: 0;
-//  padding: 0;
-//  box-sizing: border-box;
-//  width: 100%;
-//  height: 100%;
-//
-//  body {
-//    //font-family: Roboto,
-//    //"Helvetica Neue", sans-serif;
-//    max-width: 1200px; __<<ngM2ThemingMigrationEscapedComment1>>__
-//    margin: 0 auto; __<<ngM2ThemingMigrationEscapedComment2>>__
-//    padding: 0 16px; __<<ngM2ThemingMigrationEscapedComment3>>__
-//  }
-//}
-
+body {
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
 
 
 
