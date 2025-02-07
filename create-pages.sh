@@ -41,7 +41,7 @@ ng generate component components/buttons/button-enquire
 ng generate component components/buttons/button-contact-us
 
 ng generate component components/Header
-
+ng generate component sitemap
 #<a href="https://www.flaticon.com/free-icons/thyroid-gland" title="thyroid-gland icons">Thyroid-gland icons created by Vitaly Gorbachev - Flaticon</a>
 #<a href="https://www.flaticon.com/free-icons/testies" title="testies icons">Testies icons created by HAJICON - Flaticon</a>
 #<a href="https://www.flaticon.com/free-icons/hypothalamus" title="hypothalamus icons">Hypothalamus icons created by Slamlabs - Flaticon</a>

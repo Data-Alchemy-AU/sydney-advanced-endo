@@ -1,0 +1,21 @@
+<div class="sitemap">
+  <h2>Site Map</h2>
+  <ul>
+    <li *ngFor="let link of sitemapLinks">
+      <ng-container *ngIf="link.children?.length; else singleLink">
+        <!-- "OUR TEAM" Clickable with Nested Profiles -->
+        <a [routerLink]="link.path">{{ link.label }}</a>
+        <ul>
+          <li *ngFor="let child of link.children">
+            <a [routerLink]="child.path">{{ child.label }}</a>
+          </li>
+        </ul>
+      </ng-container>
+
+      <!-- For normal (non-nested) links -->
+      <ng-template #singleLink>
+        <a [routerLink]="link.path">{{ link.label }}</a>
+      </ng-template>
+    </li>
+  </ul>
+</div>
