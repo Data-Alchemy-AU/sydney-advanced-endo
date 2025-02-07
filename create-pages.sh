@@ -1,4 +1,6 @@
-ng add @angular/material
+ng add @angular/material@19
+ng generate @angular/material:theme-color
+
 
 ng g c Home
 ng g c AboutUs
