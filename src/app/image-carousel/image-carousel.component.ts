@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component, Inject, Input, OnDestroy, OnInit, PLATFORM_ID} from '@angular/core';
+import {CommonModule, isPlatformBrowser} from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import {Result} from "./result";
 import {ImageCarouselService} from "../image-carousel.service";
@@ -12,7 +12,7 @@ import {ImageCarouselService} from "../image-carousel.service";
   styleUrls: ['./image-carousel.component.scss']
 })
 
-export class ImageCarouselComponent implements OnInit {
+export class ImageCarouselComponent implements OnInit, OnDestroy {
 
   @Input() indicatorsVisible = true;
   @Input() animationSpeed = 500;
@@ -26,7 +26,11 @@ export class ImageCarouselComponent implements OnInit {
   // faArrowLeft = faArrowLeft;
   hidden = false;
 
-  constructor(private imageCarouselItems: ImageCarouselService) {}
+  constructor(
+    private imageCarouselItems: ImageCarouselService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+  }
 
   next() {
     if (this.slides.length === 0) return; // Prevent out-of-bounds error
@@ -76,21 +80,26 @@ export class ImageCarouselComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.imageCarouselItems.getAllImageCarouselItems()
-      .subscribe({
-        next: (slides: Result[]) => {
-          this.slides = slides;
-          if (slides.length > 0) {
-            this.currentSlide = 0;
+    // setting up the refresh interval caused a timeout in prerendering, so only set up interval if rendering in browser
+    if (isPlatformBrowser(this.platformId)) {
 
-            // **Start auto-play only after data is loaded**
-            this.startAutoPlay(); // Start auto-play initially
-        }
-      },
-      error: (error) => {
-        console.error("Error fetching slides:", error);
-      }
-    });
+
+      this.imageCarouselItems.getAllImageCarouselItems()
+        .subscribe({
+          next: (slides: Result[]) => {
+            this.slides = slides;
+            if (slides.length > 0) {
+              this.currentSlide = 0;
+
+              // **Start auto-play only after data is loaded**
+              this.startAutoPlay(); // Start auto-play initially
+            }
+          },
+          error: (error) => {
+            console.error("Error fetching slides:", error);
+          }
+        });
+    }
   }
 
   ngOnDestroy() {

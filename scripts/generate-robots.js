@@ -11,7 +11,7 @@ Allow: /
 Sitemap: ${BASE_URL}/sitemap.xml
 `;
 
-const outputDir = path.resolve(__dirname, '../dist/your-project-name');
+const outputDir = path.resolve(__dirname, '../dist/sydney-advanced-endo');
 fs.writeFileSync(path.join(outputDir, 'robots.txt'), robotsContent);
 
 console.log('✅ Robots.txt generated:', path.join(outputDir, 'robots.txt'));

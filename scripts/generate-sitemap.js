@@ -14,7 +14,7 @@ ${routes.map(route => `
   </url>`).join('')}
 </urlset>`;
 
-const outputDir = path.resolve(__dirname, '../dist/your-project-name');
+const outputDir = path.resolve(__dirname, '../dist/sydney-advanced-endo');
 fs.writeFileSync(path.join(outputDir, 'sitemap.xml'), sitemapContent);
 
 console.log('✅ Sitemap generated:', path.join(outputDir, 'sitemap.xml'));
