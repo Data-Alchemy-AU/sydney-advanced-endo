@@ -3,6 +3,7 @@ import {ImageCarouselComponent} from "../image-carousel/image-carousel.component
 import {AboutUsSummaryComponent} from "../about-us-summary/about-us-summary.component";
 import {OurTeamSummaryComponent} from "../our-team-summary/our-team-summary.component";
 import {ContactUsSummaryComponent} from "../contact-us-summary/contact-us-summary.component";
+import {ServicesSummaryComponent} from "../services-summary/services-summary.component";
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ import {ContactUsSummaryComponent} from "../contact-us-summary/contact-us-summar
     AboutUsSummaryComponent,
     OurTeamSummaryComponent,
     ContactUsSummaryComponent,
+    ServicesSummaryComponent,
   ],
   templateUrl: './home.component.html',
   standalone: true,

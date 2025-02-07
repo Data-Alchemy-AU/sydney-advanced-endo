@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import {Result} from "./result";
 import {ImageCarouselService} from "../image-carousel.service";
-import {error} from "@angular/compiler-cli/src/transformers/util";
 
 @Component({
   selector: 'app-image-carousel',
@@ -80,12 +79,12 @@ export class ImageCarouselComponent implements OnInit {
     this.imageCarouselItems.getAllImageCarouselItems()
       .subscribe({
         next: (slides: Result[]) => {
-        this.slides = slides;
-        if (slides.length > 0) {
-          this.currentSlide = 0;
+          this.slides = slides;
+          if (slides.length > 0) {
+            this.currentSlide = 0;
 
-          // **Start auto-play only after data is loaded**
-          this.startAutoPlay(); // Start auto-play initially
+            // **Start auto-play only after data is loaded**
+            this.startAutoPlay(); // Start auto-play initially
         }
       },
       error: (error) => {

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import {MatButton} from "@angular/material/button";
+import {ButtonSharedComponent} from "../components/buttons/button-shared/button-shared.component";
 
 @Component({
   selector: 'app-button-contact-enquire',
-  imports: [MatButton],
+  imports: [ButtonSharedComponent],
   templateUrl: './button-contact-enquire.component.html',
   standalone: true,
   styleUrl: './button-contact-enquire.component.scss'
 })
-export class ButtonContactEnquireComponent {}
+export class ButtonContactEnquireComponent {
+}
+

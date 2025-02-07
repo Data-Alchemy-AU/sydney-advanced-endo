@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import {MatButton} from "@angular/material/button";
 import {ClinicService} from "../clinic.service";
+import {ButtonSharedComponent} from "../components/buttons/button-shared/button-shared.component";
 
 @Component({
   selector: 'app-about-us-summary',
-  imports: [
-    MatButton
-  ],
+    imports: [
+        ButtonSharedComponent
+    ],
   templateUrl: './about-us-summary.component.html',
   standalone: true,
   styleUrl: './about-us-summary.component.scss'

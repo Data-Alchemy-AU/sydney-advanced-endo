@@ -1,0 +1,91 @@
+<!--<button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="color" mat-button>-->
+<!--  {{ text }}-->
+<!--</button>-->
+<!--<button-->
+<!--  [routerLink]="link"-->
+<!--  routerLinkActive="active"-->
+<!--  ariaCurrentWhenActive="page"-->
+<!--  [color]="colorClass"-->
+<!--  mat-button-->
+<!--&gt;-->
+<!--  {{ text }}-->
+<!--</button>-->
+
+<!--<button-->
+<!--  [routerLink]="link"-->
+<!--  routerLinkActive="active"-->
+<!--  ariaCurrentWhenActive="page"-->
+<!--  *ngIf="materialVariant === 'flat'; else otherButtons"-->
+<!--  mat-flat-button-->
+<!--  [color]="colorClass || null"-->
+<!--&gt;-->
+<!--  {{ text }}-->
+<!--</button>-->
+
+<!--<ng-template #otherButtons>-->
+<!--  <button *ngIf="materialVariant === 'raised'" mat-raised-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">-->
+<!--    {{ text }}-->
+<!--  </button>-->
+
+<!--  <button *ngIf="materialVariant === 'stroked'" mat-stroked-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">-->
+<!--    {{ text }}-->
+<!--  </button>-->
+
+<!--  <button *ngIf="materialVariant === 'basic'" mat-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">-->
+<!--    {{ text }}-->
+<!--  </button>-->
+<!--</ng-template>-->
+
+<!-- Internal link (uses routerLink) -->
+<ng-container *ngIf="!isExternalLink; else externalLinkButton">
+  <button
+    *ngIf="materialVariant === 'flat'; else otherButtons"
+    mat-flat-button
+    [routerLink]="link"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    [color]="colorClass || null">
+    {{ text }}
+  </button>
+</ng-container>
+
+<!-- External link (uses href and opens in a new tab) -->
+<ng-template #externalLinkButton>
+  <a
+    [href]="link"
+    target="_blank"
+    rel="noopener noreferrer"
+    *ngIf="materialVariant === 'flat'; else otherButtonsAnchor">
+    <button mat-flat-button [color]="colorClass || null">
+      {{ text }}
+    </button>
+  </a>
+</ng-template>
+
+<ng-template #otherButtons>
+  <button *ngIf="materialVariant === 'raised'" mat-raised-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
+    {{ text }}
+  </button>
+
+  <button *ngIf="materialVariant === 'stroked'" mat-stroked-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
+    {{ text }}
+  </button>
+
+  <button *ngIf="materialVariant === 'basic'" mat-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
+    {{ text }}
+  </button>
+</ng-template>
+
+<ng-template #otherButtonsAnchor>
+  <a [href]="link" target="_blank" rel="noopener noreferrer">
+    <button mat-raised-button *ngIf="materialVariant === 'raised'" [color]="colorClass || null">
+      {{ text }}
+    </button>
+    <button mat-stroked-button *ngIf="materialVariant === 'stroked'" [color]="colorClass || null">
+      {{ text }}
+    </button>
+    <button mat-button *ngIf="materialVariant === 'basic'" [color]="colorClass || null">
+      {{ text }}
+    </button>
+  </a>
+</ng-template>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {MatButton} from "@angular/material/button";
+import {ButtonSharedComponent} from "../components/buttons/button-shared/button-shared.component";
 
 @Component({
   selector: 'app-our-team-summary',
   imports: [
-    MatButton
+    ButtonSharedComponent
   ],
   templateUrl: './our-team-summary.component.html',
   standalone: true,

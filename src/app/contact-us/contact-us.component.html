@@ -21,7 +21,7 @@
     <li>(02)-xxx-xxx-xxxx</li>
   </ul>
   <div>
-    <button mat-flat-button color="primary">Contact Us</button>
+    <app-button-shared buttonType="enquire"></app-button-shared>
   </div>
 </div>
 <div>
@@ -33,18 +33,12 @@
 </div>
 <div>
   <h3>Transport</h3>
-  <p>The clinic is easily accessible by car, public transport or on foot. The clinic is easily accessible by <a
-    href="https://transportnsw.info/trip#/trip?from=current&to=streetID:1500000046:438:95301009:-1:Victoria%20St:Darlinghurst:Victoria%20St::Victoria%20St:2010:ANY:DIVA_SINGLEHOUSE:4890304:3756989:GDAV:nsw:0&travelMode=publicTransport">public
-    transport.</a>
-    Detailed parking information is available on the <a
-      href="https://www.stvincentsclinic.com.au/getting-here/how-to-get-here">St Vincent's clinic website.</a>
-  </p>
-  <button mat-flat-button color="primary">Find Out More</button>
+  <p>The clinic is easily accessible by car, public transport or on foot. The clinic is easily accessible by public transport.</p>
+  <app-button-shared buttonText = "Find Out More" variant="flat" color="primary" buttonLink = "https://www.stvincentsclinic.com.au/getting-here/how-to-get-here"></app-button-shared>
+<!--  <button mat-flat-button color="primary">Find Out More</button>-->
 </div>
 <div>
   <h3>Parking</h3>
-  <p>Detailed parking information is available on the St Vincent's clinic website. <a
-    href="https://www.stvincentsclinic.com.au/getting-here/parking">St Vincent's clinic website.</a>
-  </p>
-  <button mat-flat-button color="primary">Find Out More</button>
+  <p>Detailed parking information is available on the St Vincent's clinic website.</p>
+  <app-button-shared buttonText = "Find Out More" variant="flat" color="primary" buttonLink = "https://www.stvincentsclinic.com.au/getting-here/parking"></app-button-shared>
 </div>

@@ -4,7 +4,7 @@ import {ButtonContactEnquireComponent} from "../button-contact-enquire/button-co
 @Component({
   selector: 'app-contact-us-summary',
   imports: [
-    ButtonContactEnquireComponent
+    ButtonContactEnquireComponent,
   ],
   templateUrl: './contact-us-summary.component.html',
   standalone: true,
