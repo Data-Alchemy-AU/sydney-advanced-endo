@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {ActivatedRoute, RouterLink, RouterLinkActive} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 import {ProfileService} from "../profile.service";
 import {Profile} from "../profile";
 import {CommonModule} from "@angular/common";
@@ -10,10 +10,11 @@ import {
 } from "@angular/material/card";
 import {ButtonContactEnquireComponent} from "../button-contact-enquire/button-contact-enquire.component";
 import {MatButtonModule} from "@angular/material/button";
+import {ButtonSharedComponent} from "../components/buttons/button-shared/button-shared.component";
 
 @Component({
   selector: 'app-our-team-detail',
-  imports: [CommonModule, MatGridListModule, MatCardModule, ButtonContactEnquireComponent, MatButtonModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, MatGridListModule, MatCardModule, ButtonContactEnquireComponent, MatButtonModule, ButtonSharedComponent],
   templateUrl: './our-team-detail.component.html',
   standalone: true,
   styleUrl: './our-team-detail.component.scss'

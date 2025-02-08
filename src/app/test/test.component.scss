@@ -1,21 +1,47 @@
-.grid-container {
-  margin: 20px;
+@use '@angular/material' as mat;
+
+
+
+section {
+  display: table;
 }
 
-.dashboard-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
 }
 
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
 }
 
-.dashboard-card-content {
-  text-align: center;
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 140px;
+}
+
+.example-custom{
+    //@include mat.card-theme(mat.$chartreuse-palette);
+  @include mat.theme-overrides((
+    color: (
+      primary: mat.$chartreuse-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
 }

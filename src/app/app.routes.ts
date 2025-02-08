@@ -8,7 +8,7 @@ import {EnquireComponent} from "./enquire/enquire.component";
 import {OurTeamComponent} from "./our-team/our-team.component";
 import {OurTeamDetailComponent} from "./our-team-detail/our-team-detail.component";
 import {SitemapComponent} from "./sitemap/sitemap.component";
-
+import {TestComponent } from "./test/test.component";
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
@@ -18,6 +18,7 @@ export const routes: Routes = [
   { path: 'enquire', component: EnquireComponent},
   {path: 'our-team-detail/:id', component: OurTeamDetailComponent},
   {path: 'sitemap', component: SitemapComponent},
+  {path: 'test', component: TestComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

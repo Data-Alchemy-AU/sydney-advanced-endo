@@ -1,3 +1,6 @@
+@use '@angular/material' as mat;
+@use "../../styles/styles_theme-colors" as theme-colors;
+
 
 .fixed-header {
   position: sticky;
@@ -6,35 +9,50 @@
   z-index: 1;
   width: 100% !important;
   //min-height: 70px !important;
-  height: 80px !important;
+  height: fit-content !important;
   display: flex;
   align-items: center; /* Center items vertically */
   justify-content: space-between; /* Space logo and buttons apart */
   padding: 24px 16px 24px 0; /* Add horizontal padding */
+  background-color: var(--mat-sys-secondary-background);
 
-  .logo-button {
+  //.logo-button {
+  //  display: inline-block; /* Ensures the button wraps tightly around the SVG */
+  //  padding: 0; /* Removes any padding around the link */
+  //  border: none; /* Removes any default border */
+  //  text-decoration: none; /* Removes underline from link */
+  //  height: inherit; /* Maintains aspect ratio */
+  //
+  //  app-logo {
+  //    display: block;
+  //    cursor: pointer; /* Changes cursor to pointer for better UX */
+  //    overflow: hidden;
+  //    border: none; /* Removes any default border */
+  //  }
+  //}
+
+  .logo-container {
+    flex: 0 0 auto;
+    height: 100%; /* Maintains aspect ratio */
     display: inline-block; /* Ensures the button wraps tightly around the SVG */
     padding: 0; /* Removes any padding around the link */
-    border: none; /* Removes any default border */
-    text-decoration: none; /* Removes underline from link */
-    height: inherit; /* Maintains aspect ratio */
+    //border: red solid 1px;
 
-    app-logo {
-      display: block;
-      cursor: pointer; /* Changes cursor to pointer for better UX */
-      overflow: hidden;
+    .button {
       border: none; /* Removes any default border */
+      text-decoration: none; /* Removes underline from link */
+      //border: deeppink solid 1px;
+      height: inherit;
+      display: flex;
+      border-radius: 0; /* Remove rounded corners */
     }
-  }
 
-  .navbar-separator {
-    flex: 1 1 auto;
   }
 
   .nav-buttons {
     display: flex; /* Use flexbox to align buttons */
     //flex-direction: row;
-    gap: 16px; /* Adds spacing between buttons */
+    gap: 8px; /* Adds spacing between buttons */
     justify-content: space-between; /* Centers the buttons horizontally */
     align-items: center; /* Aligns buttons vertically */
     flex-wrap: wrap; /* Allows buttons to wrap if needed */

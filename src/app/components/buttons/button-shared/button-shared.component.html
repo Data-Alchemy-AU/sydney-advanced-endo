@@ -39,6 +39,7 @@
 <!-- Internal link (uses routerLink) -->
 <ng-container *ngIf="!isExternalLink; else externalLinkButton">
   <button
+    class = "button"
     *ngIf="materialVariant === 'flat'; else otherButtons"
     mat-flat-button
     [routerLink]="link"
@@ -56,35 +57,44 @@
     target="_blank"
     rel="noopener noreferrer"
     *ngIf="materialVariant === 'flat'; else otherButtonsAnchor">
-    <button mat-flat-button [color]="colorClass || null">
+    <button mat-flat-button class = "button" [color]="colorClass || null">
       {{ text }}
     </button>
   </a>
 </ng-template>
 
 <ng-template #otherButtons>
-  <button *ngIf="materialVariant === 'raised'" mat-raised-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
+  <button class = "button"
+          *ngIf="materialVariant === 'raised'"   mat-raised-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
     {{ text }}
   </button>
 
-  <button *ngIf="materialVariant === 'stroked'" mat-stroked-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
+  <button class = "button"
+          *ngIf="materialVariant === 'stroked'"
+          mat-stroked-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
     {{ text }}
   </button>
 
-  <button *ngIf="materialVariant === 'basic'" mat-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
+  <button class = "button"
+          *ngIf="materialVariant === 'basic'"
+           mat-button [routerLink]="link" routerLinkActive="active" ariaCurrentWhenActive="page" [color]="colorClass || null">
     {{ text }}
   </button>
 </ng-template>
 
 <ng-template #otherButtonsAnchor>
   <a [href]="link" target="_blank" rel="noopener noreferrer">
-    <button mat-raised-button *ngIf="materialVariant === 'raised'" [color]="colorClass || null">
+    <button mat-raised-button class = "button"
+            *ngIf="materialVariant === 'raised'"
+             [color]="colorClass || null">
       {{ text }}
     </button>
-    <button mat-stroked-button *ngIf="materialVariant === 'stroked'" [color]="colorClass || null">
+    <button mat-stroked-button class = "button"
+            *ngIf="materialVariant === 'stroked'" [color]="colorClass || null">
       {{ text }}
     </button>
-    <button mat-button *ngIf="materialVariant === 'basic'" [color]="colorClass || null">
+    <button mat-button  class = "button"
+            *ngIf="materialVariant === 'basic'" [color]="colorClass || null">
       {{ text }}
     </button>
   </a>

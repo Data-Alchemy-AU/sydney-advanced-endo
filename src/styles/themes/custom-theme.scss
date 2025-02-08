@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+//@use "../styles_theme-colors" as theme-colors;
+@use "../styles_theme-3cols" as theme-colors;
+//
+//$custom-primary: theme-colors.$primary-palette;
+//$custom-tertiary theme-colors.$tertiary-palette;
+
+ //Define the Material theme
+$custom-theme: mat.define-theme(
+    (
+      color: (
+        primary: theme-colors.$primary-palette,
+        tertiary: theme-colors.$tertiary-palette,
+      ),
+      typography: (
+        plain-family: quicksand,
+        brand-family: oswald,
+        bold-weight: 900,
+        medium-weight: 500,
+        regular-weight: 300,
+      ),
+      density: (
+        scale: 0,
+      ),
+    )
+  );

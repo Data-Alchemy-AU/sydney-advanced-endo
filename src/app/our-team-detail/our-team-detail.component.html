@@ -9,10 +9,14 @@
       <h2 > {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}</h2>
       <p > {{ profile?.pos }} , {{ profile?.qual }}</p>
     </div>
+    <div class = "separator">
+    </div>
     <div class = button-container>
-        <button mat-flat-button routerLink="/our-team" routerLinkActive="active" ariaCurrentWhenActive="page" class="button-container-back" color="primary">Back to Doctors</button>
+      <app-button-shared buttonType="our-team" buttonText = "Back to Doctors"></app-button-shared>
+<!--      <button mat-flat-button routerLink="/our-team" routerLinkActive="active" ariaCurrentWhenActive="page" class="button-container-back" color="primary">Back to Doctors</button>-->
       </div>
   </div>
+
   <div class = 'profile-detail-content'>
     <h2 >About {{ profile?.title }} {{ profile?.lastname}}</h2>
     <p >{{ profile?.desc }}

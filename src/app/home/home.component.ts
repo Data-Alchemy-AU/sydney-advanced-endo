@@ -4,6 +4,7 @@ import {AboutUsSummaryComponent} from "../about-us-summary/about-us-summary.comp
 import {OurTeamSummaryComponent} from "../our-team-summary/our-team-summary.component";
 import {ContactUsSummaryComponent} from "../contact-us-summary/contact-us-summary.component";
 import {ServicesSummaryComponent} from "../services-summary/services-summary.component";
+import {MatDivider} from "@angular/material/divider";
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import {ServicesSummaryComponent} from "../services-summary/services-summary.com
     OurTeamSummaryComponent,
     ContactUsSummaryComponent,
     ServicesSummaryComponent,
+    MatDivider,
   ],
   templateUrl: './home.component.html',
   standalone: true,

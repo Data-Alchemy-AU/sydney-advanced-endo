@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {MatButton} from "@angular/material/button";
 
 @Component({
     selector: 'app-enquire',
-    imports: [],
+  imports: [
+    MatButton
+  ],
     templateUrl: './enquire.component.html',
     styleUrl: './enquire.component.scss'
 })

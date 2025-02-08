@@ -3,42 +3,32 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   place-content: start;
-  //border: red solid 1px;
 
   .profile-detail-header {
     width: 100%;
     display: inline-flex;
     align-content: space-between;
     grid-column: span 2;
-    //border: green solid 1px;
     flex-wrap: wrap; /* Allows buttons to wrap if needed */
-
-    .navbar-separator {
+    .separator {
       flex: 1 1 auto;
     }
   }
 
   .button-container {
     justify-self: right;
-    //border: orangered solid 1px;
     &-back {
       cursor: pointer; /* Changes cursor to pointer for better UX */
-      //float: right;
     }
   }
 
   .profile-detail-image-container {
-    //grid-column: 2/2;
-    //grid-row:2/2;
-    //border: blue solid 1px;
 
     .profile-detail-image {
       height: 600px;
       width: 100%;
       object-fit: cover;
       border-radius: 30px;
-      //float: right;
-      //border: blue solid 1px;
     }
   }
 
