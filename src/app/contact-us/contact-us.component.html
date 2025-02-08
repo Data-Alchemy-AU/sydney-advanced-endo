@@ -1,51 +1,112 @@
-<img src="https://via.placeholder.com/600x300" alt="Sample Image" class="image">
 <div class = "page-container">
-<h1>Contact Us</h1>
-<div>
-  <h2>Sydney Advanced Endocrinology</h2>
-  <img src="https://via.placeholder.com/600x300" alt="Sample Image" class="image">
-  <h3>St Vincents Clinic</h3>
-  <p>We are located within st Vincent’s clinic next door to St Vincent’s Private Hospital on the corner of Oxford and
-    Victoria Streets Darlinghurst.</p>
-  <p><strong>Address</strong></p>
-  <p>Suite xxxx<br>Level xxxx<br>438 Victoria St<br>Darlinghurst NSW 2010</p>
-</div>
-<div>
-  <h2>Map</h2>
-  <app-map></app-map>
-</div>
-  <mat-divider></mat-divider>
-  <div>
-  <!--<app-demomap></app-demomap>-->
-  <h3>Contact</h3>
-  <ul>
-    <li>reception&#64;email.com</li>
-    <li>(02)-xxx-xxx-xxxx</li>
-    <li>(02)-xxx-xxx-xxxx</li>
-  </ul>
-  <div>
-    <app-button-shared buttonType="enquire"></app-button-shared>
+    <img src="https://via.placeholder.com/600x300" alt="Sample Image" class="image">
+  <div class="section-container">
+    <h1>Contact Us</h1>
   </div>
-</div>
-  <mat-divider></mat-divider>
-  <div>
-  <h3>Hours</h3>
-  <ul>
-    <li>Monday to Friday 8:00 am - 5:30 pm</li>
-    <li>Public holidays closed</li>
-  </ul>
-</div>
-  <mat-divider></mat-divider>
-  <div>
+    <div class="section-container">
+      <div>
+      <h2>Sydney Advanced Endocrinology</h2>
+      <h3>St Vincents Clinic</h3>
+      <p>We are located within st Vincent’s clinic next door to St Vincent’s Private Hospital on the corner of Oxford and
+        Victoria Streets Darlinghurst.</p>
+    </div>
+
+    <div class = 'site-detail-header'>
+
+      <div class = "address-container">
+        <h4>Address</h4>
+        <p>Suite xxxx</p>
+        <p>Level xxxx</p>
+        <p>438 Victoria St</p>
+        <p>Darlinghurst NSW 2010</p>
+      </div>
+
+    <div class = "contact-container">
+      <h4>Get in Touch</h4>
+        <p><mat-icon>phone</mat-icon> (02)-xxx-xxx-xxxx</p>
+        <p><mat-icon>fax</mat-icon> (02)-xxx-xxx-xxxx</p>
+        <p> <mat-icon>email</mat-icon> (02)-xxx-xxx-xxxx</p>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <h4>Hours</h4>
+      <p>Monday to Friday 8:00 am - 5:30 pm </p>
+      <p>Public holidays closed</p>
+    </div>
+
+    <div class="section-container">
+      <h4>Map</h4>
+      <app-map></app-map>
+    </div>
+    </div>
+<!--    <div disabled="true">-->
+<!--      <app-button-shared buttonType="enquire"></app-button-shared>-->
+<!--    </div>-->
+
+<mat-divider></mat-divider>
+<div class="section-container">
   <h3>Transport</h3>
   <p>The clinic is easily accessible by car, public transport or on foot. The clinic is easily accessible by public transport.</p>
   <app-button-shared buttonText = "Find Out More" variant="flat" color="primary" buttonLink = "https://www.stvincentsclinic.com.au/getting-here/how-to-get-here"></app-button-shared>
-<!--  <button mat-flat-button color="primary">Find Out More</button>-->
-</div>
-  <mat-divider></mat-divider>
-  <div>
+  <!--  <button mat-flat-button color="primary">Find Out More</button>-->
+</div >
+<mat-divider></mat-divider>
+<div class="section-container">
   <h3>Parking</h3>
   <p>Detailed parking information is available on the St Vincent's clinic website.</p>
   <app-button-shared buttonText = "Find Out More" variant="flat" color="primary" buttonLink = "https://www.stvincentsclinic.com.au/getting-here/parking"></app-button-shared>
 </div>
 </div>
+<!--<img src="https://via.placeholder.com/600x300" alt="Sample Image" class="image">-->
+<!--<div class = "page-container">-->
+<!--<h1>Contact Us</h1>-->
+<!--<div>-->
+<!--  <h2>Sydney Advanced Endocrinology</h2>-->
+<!--  <img src="https://via.placeholder.com/600x300" alt="Sample Image" class="image">-->
+<!--  <h3>St Vincents Clinic</h3>-->
+<!--  <p>We are located within st Vincent’s clinic next door to St Vincent’s Private Hospital on the corner of Oxford and-->
+<!--    Victoria Streets Darlinghurst.</p>-->
+<!--  <p><strong>Address</strong></p>-->
+<!--  <p>Suite xxxx<br>Level xxxx<br>438 Victoria St<br>Darlinghurst NSW 2010</p>-->
+<!--</div>-->
+<!--<div>-->
+<!--  <h2>Map</h2>-->
+<!--  <app-map></app-map>-->
+<!--</div>-->
+<!--  <mat-divider [inset]="true">-->
+<!--  </mat-divider>-->
+<!--  <div>-->
+<!--  &lt;!&ndash;<app-demomap></app-demomap>&ndash;&gt;-->
+<!--  <h3>Contact</h3>-->
+<!--  <ul>-->
+<!--    <li>reception&#64;email.com</li>-->
+<!--    <li>(02)-xxx-xxx-xxxx</li>-->
+<!--    <li>(02)-xxx-xxx-xxxx</li>-->
+<!--  </ul>-->
+<!--  <div>-->
+<!--    <app-button-shared buttonType="enquire"></app-button-shared>-->
+<!--  </div>-->
+<!--</div>-->
+<!--  <mat-divider></mat-divider>-->
+<!--  <div>-->
+<!--  <h3>Hours</h3>-->
+<!--  <ul>-->
+<!--    <li>Monday to Friday 8:00 am - 5:30 pm</li>-->
+<!--    <li>Public holidays closed</li>-->
+<!--  </ul>-->
+<!--</div>-->
+<!--  <mat-divider></mat-divider>-->
+<!--  <div>-->
+<!--  <h3>Transport</h3>-->
+<!--  <p>The clinic is easily accessible by car, public transport or on foot. The clinic is easily accessible by public transport.</p>-->
+<!--  <app-button-shared buttonText = "Find Out More" variant="flat" color="primary" buttonLink = "https://www.stvincentsclinic.com.au/getting-here/how-to-get-here"></app-button-shared>-->
+<!--&lt;!&ndash;  <button mat-flat-button color="primary">Find Out More</button>&ndash;&gt;-->
+<!--</div>-->
+<!--  <mat-divider></mat-divider>-->
+<!--  <div>-->
+<!--  <h3>Parking</h3>-->
+<!--  <p>Detailed parking information is available on the St Vincent's clinic website.</p>-->
+<!--  <app-button-shared buttonText = "Find Out More" variant="flat" color="primary" buttonLink = "https://www.stvincentsclinic.com.au/getting-here/parking"></app-button-shared>-->
+<!--</div>-->
+<!--</div>-->

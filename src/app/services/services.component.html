@@ -1,8 +1,12 @@
-<h2>Our Services</h2>
-<section class="service-list">
+<div class="page-container">
+  <div>
+  <h2>Our Services</h2>
+  </div>
+<div class="service-list">
   <app-service-card
     class = app-service-card
     *ngFor="let service of serviceList"
     [service]="service"
   ></app-service-card>
-</section>
+</div>
+</div>

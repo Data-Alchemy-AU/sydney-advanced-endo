@@ -16,24 +16,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 16px 16px 0; /* Add horizontal padding */
+    padding: 0;
+    //padding: 24px 16px 16px 0; /* Add horizontal padding */
     height: 100px; /* Adjust height as needed */
-    gap: 16px; /* Adds spacing between buttons */
+    //gap: 16px; /* Adds spacing between buttons */
     background-color: var(--mat-sys-secondary-background);
-
     .logo-container {
       flex: 0 0 auto;
       height: 100%; /* Maintains aspect ratio */
       display: inline-flex; /* Ensures the button wraps tightly around the SVG */
-      padding: 0; /* Removes any padding around the link */
-      //border: red solid 1px;
+      //padding: 0; /* Removes any padding around the link */
 
       .button {
+        //border: red solid 1px;
         border: none; /* Removes any default border */
         text-decoration: none; /* Removes underline from link */
         height: inherit;
         display: inline-flex;
         border-radius: 0; /* Remove rounded corners */
+        margin: 0;
+        padding-left: 0;
       }
     }
 

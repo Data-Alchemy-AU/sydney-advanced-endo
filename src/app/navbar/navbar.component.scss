@@ -13,9 +13,9 @@
   display: flex;
   align-items: center; /* Center items vertically */
   justify-content: space-between; /* Space logo and buttons apart */
-  padding: 24px 16px 24px 0; /* Add horizontal padding */
+  //padding: 24px 16px 24px 0; /* Add horizontal padding */
   background-color: var(--mat-sys-secondary-background);
-
+  padding: 0 !important;
   //.logo-button {
   //  display: inline-block; /* Ensures the button wraps tightly around the SVG */
   //  padding: 0; /* Removes any padding around the link */
@@ -35,7 +35,7 @@
     flex: 0 0 auto;
     height: 100%; /* Maintains aspect ratio */
     display: inline-block; /* Ensures the button wraps tightly around the SVG */
-    padding: 0; /* Removes any padding around the link */
+    //padding: 0; /* Removes any padding around the link */
     //border: red solid 1px;
 
     .button {
@@ -45,6 +45,8 @@
       height: inherit;
       display: flex;
       border-radius: 0; /* Remove rounded corners */
+      margin: 0;
+      padding-left: 0;
     }
 
   }

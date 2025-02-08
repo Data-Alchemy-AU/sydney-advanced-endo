@@ -1,8 +1,8 @@
-
 <google-map
   height="400px"
   width="750px"
   [options]="mapOptions"
+  class = "map-container"
   (mapInitialized)="onMapReady($event)">
   <map-marker
     #marker="mapMarker"
@@ -24,6 +24,7 @@
   </map-info-window>
 
   </google-map>
+
 <button mat-flat-button class = "reset-map-button" (click)="mapReset()">Reset Map</button>
 <!--https://maps.googleapis.com/maps/api/staticmap?center=st+vincents+clinic,sydney,nsw&zoom=15-->
 <!--&markers=st+vincents+clinic,sydney,nsw-->

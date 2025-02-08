@@ -1,0 +1,26 @@
+.site-detail-header {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center; /* Centers content horizontally */
+  align-content: space-evenly;
+  //position: relative;
+  grid-column: span 2;
+  flex-wrap: wrap; /* Allows divs to wrap if needed */
+  height : fit-content;
+
+  .address-container, .contact-container {
+    flex: 1 1 300px; /* Responsive width with min size */
+    text-align: left; /* Center text inside */
+
+    p {
+      //margin: 1px;
+      display: flex;
+      align-items: center; /* Align icons and text vertically */
+      text-align: center;
+    }
+  }
+
+  //@media (max-width: 768px) {
+  //  flex-direction: column; /* Stack items on smaller screens */
+  //}
+}

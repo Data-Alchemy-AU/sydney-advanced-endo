@@ -3,14 +3,15 @@ import {GoogleMap, GoogleMapsModule, MapInfoWindow, MapAdvancedMarker, MapMarker
 import {Observable} from "rxjs";
 import {CommonModule} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
+import {MatDivider} from "@angular/material/divider";
 
 @Component({
   selector: 'app-map',
-  imports: [
-    GoogleMapsModule,
-    GoogleMap, MapInfoWindow, MapMarker,
-    CommonModule, MatButtonModule
-  ],
+    imports: [
+        GoogleMapsModule,
+        GoogleMap, MapInfoWindow, MapMarker,
+        CommonModule, MatButtonModule, MatDivider
+    ],
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss',
   providers: [GoogleMapsModule]

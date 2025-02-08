@@ -41,6 +41,9 @@
 //}
 html, body {
   height: 100%;
+  margin: 10px;
+  //max-width: 800px;
+
 }
 //
 //body {
@@ -53,9 +56,24 @@ html, body {
 }
 
 .page-container {
-  gap: 50px;
+  gap: 25px;
+  //margin-bottom: 50px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 25px;
 }
 
+.summary-card {
+  //max-width: 800px;
+  justify-content: space-around;
+  box-shadow:none;
+  border-radius: 10px;
+
+  .button {
+    display: flex;
+    justify-items: flex-end;
+    //justify-content: right;
+    //justify-content: center;
+  }
+}
 
