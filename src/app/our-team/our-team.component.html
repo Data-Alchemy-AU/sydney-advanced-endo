@@ -1,10 +1,14 @@
 <div class="page-container">
+  <div class = "main-content">
 <!--<img src="https://via.placeholder.com/600x300" alt="Sample Image" class="image">-->
-<h2>Meet the Team</h2>
-<section class="profile-list">
+    <div class = "h2-gap">
+    <h2>Meet the Team</h2>
+    </div>
+  <section class="profile-list">
   <app-profile-card
     *ngFor="let profile of profileList"
     [profile]="profile"
   ></app-profile-card>
 </section>
+</div>
 </div>
