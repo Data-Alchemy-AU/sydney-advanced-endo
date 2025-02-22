@@ -35,7 +35,7 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
   next() {
     if (this.slides.length === 0) return; // Prevent out-of-bounds error
     // let currentSlide = (this.currentSlide + 1) % (this.slides.length);
-    let currentSlide =this.mod(this.currentSlide - 1, this.slides.length);
+    let currentSlide =this.mod(this.currentSlide + 1, this.slides.length);
     this.jumpToSlide(currentSlide);
     // console.log("Current slide is %d of %d slides\",this.currentSlide, this.slides.length);
   }

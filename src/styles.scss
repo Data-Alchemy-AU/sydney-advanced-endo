@@ -19,6 +19,22 @@
 
 }
 
+// Ensure your theme is defined
+$my-primary: mat.get-theme-color(custom-theme.$custom-theme, primary);
+$my-on-primary: mat.get-theme-color(custom-theme.$custom-theme, on-primary);
+
+// Define CSS variables for global use
+:root {
+  --custom-primary: #{$my-primary};
+  --custom-on-primary: #{$my-on-primary};
+}
+
+//:root {
+//  --app-primary: mat.get-theme-color(custom-theme.$custom-theme, primary, default);
+//  --app-secondary: mat.get-theme-color(custom-theme.$custom-theme, secondary, default);
+//  --app-tertiary: mat.get-theme-color(custom-theme.$custom-theme, tertiary, default);
+//
+//}
 //html {
 //  //color-scheme: light dark;
 //  font-family: Roboto, 'Helvetica Neue', sans-serif;

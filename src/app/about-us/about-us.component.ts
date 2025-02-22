@@ -1,11 +1,13 @@
 import { Component , OnInit} from '@angular/core';
 import {ClinicService} from "../clinic.service";
 import {ButtonContactEnquireComponent} from "../button-contact-enquire/button-contact-enquire.component";
+import {BannerLogoComponent} from "../banner-logo/banner-logo.component";
 
 @Component({
   selector: 'app-about-us',
   imports: [
-    ButtonContactEnquireComponent
+    ButtonContactEnquireComponent,
+    BannerLogoComponent
   ],
   templateUrl: './about-us.component.html',
   standalone: true,

@@ -24,3 +24,8 @@ $custom-theme: mat.define-theme(
       ),
     )
   );
+// Manually set CSS variables
+:root {
+  --custom-primary: #{mat.get-theme-color($custom-theme, primary)};
+  --custom-on-primary: #{mat.get-theme-color($custom-theme, on-primary)};
+}
