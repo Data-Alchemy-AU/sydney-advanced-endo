@@ -6,25 +6,31 @@
     <app-logo></app-logo>
   </button>
   </div>
-<!--  </span>-->
-<!--  <span class="navbar-separator"></span>-->
-  <span class="nav-buttons">
-<!--    <button mat-button routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" >About Us</button>-->
-<!--    <button mat-button routerLink="/our-team" routerLinkActive="active" ariaCurrentWhenActive="page">Our Team</button>-->
-<!--    <button mat-button routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>-->
-<!--    <button mat-button routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>-->
-<!--    <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>-->
 
+  <!-- Desktop Navigation Buttons -->
+  <span class="nav-buttons">
+    <app-button-shared buttonType="home" variant="basic" color = 'default' ></app-button-shared> <!-- Forces flat -->
     <app-button-shared buttonType="about-us" variant="basic" color = 'default' ></app-button-shared> <!-- Forces flat -->
     <app-button-shared buttonType="our-team" variant="basic" color = 'default'></app-button-shared> <!-- Forces flat -->
     <app-button-shared buttonType="services" variant="basic" color = 'default'></app-button-shared> <!-- Forces flat -->
     <app-button-shared buttonType="contact-us" variant="basic" color = 'default'></app-button-shared> <!-- Forces flat -->
     <app-button-shared buttonType="enquire" variant="flat" color="primary"></app-button-shared> <!-- Forces flat -->
-
-    <!--    <button mat-button [matMenuTriggerFor]="menu" >-->
-<!--      <mat-icon>menu</mat-icon>-->
-<!--    </button>-->
    </span>
+
+
+  <!-- Mobile Menu (Hidden on Desktop) -->
+  <button mat-icon-button class="burger-menu" [matMenuTriggerFor]="mobileMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #mobileMenu="matMenu">
+    <button mat-menu-item routerLink="/index">Home</button>
+    <button mat-menu-item routerLink="/about-us">About Us</button>
+    <button mat-menu-item routerLink="/our-team">Our Team</button>
+    <button mat-menu-item routerLink="/services">Services</button>
+    <button mat-menu-item routerLink="/contact-us">Contact Us</button>
+    <button mat-menu-item routerLink="/enquire" color="primary">Enquire</button>
+  </mat-menu>
 </mat-toolbar>
 <mat-divider></mat-divider>
 

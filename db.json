@@ -6,29 +6,36 @@
   ],
   "profiles":
   [
-    {"title": "Dr",
-      "firstname": "Bruce",
-      "lastname": "Banner",
-      "pos": "Specialist in Radiation Therapy & Gamma Research",
-      "qual": "M.D., Ph.D",
-     "desc": "Dr. Bruce Banner is a world-class expert in nuclear physics and radiation therapy, known for his groundbreaking research on gamma energy and its effects on the human body. A brilliant scientist with multiple doctorates, Dr. Banner’s work focuses on regenerative medicine, cellular mutation, and advanced radiation treatments. Though his own exposure to gamma radiation led to some… unexpected transformations, he remains dedicated to using his vast knowledge to help others. Whether developing cutting-edge therapies or consulting on high-risk radiation cases, Dr. Banner brings unparalleled expertise—just don’t make him angry.",
-      "url": "./assets/Doctors/Banner.jpeg"},
+    {
+      "id": 1,
+      "title": "Dr",
+      "firstname": "Tamara",
+      "lastname": "Milder",
+      "pos": "Specialist in Endocrinology",
+      "qual": "MBBS (Hons 1), MMed (ClinEpi) FRACP, Ph.D",
+      "desc": "Dr Milder is an endocrinologist who has a PhD related to the use of medicines that protect the heart and kidney in people with type 2 diabetes.<br><br>She has over 20 peer-reviewed publications. Dr Milder had subspecialty training in management of type 2 and type 1 diabetes, and manages general endocrinology conditions including thyroid disease, osteoporosis and PCOS.",
+      "url": "./assets/Doctors/Tamie.jpeg"},
 
-    {"title": "Dr",
-      "firstname": "Stephen",
-      "lastname": "Strange",
-      "pos": "Specialist in Multidimensional Medicine",
-      "qual": "M.D., Ph.D",
-      "desc": "Dr. Stephen Strange is a world-renowned neurosurgeon with an unmatched ability to handle the most complex medical mysteries. Once a brilliant but arrogant surgeon, a life-changing accident led him to explore the mystical arts, blending science with sorcery to heal beyond conventional medicine. As the Sorcerer Supreme, he now specializes in cases that extend beyond the physical realm, offering treatments that balance the mind, body, and the very fabric of reality. Whether navigating the complexities of the human brain or defending the universe from interdimensional threats, Dr. Strange remains dedicated to protecting and healing those in need.",
-      "url": "./assets/Doctors/Strange.jpeg"},
+    {
+      "id": 2,
+      "title": "A/Prof",
+      "firstname": "Andrew",
+      "lastname": "Weissberger",
+      "pos": "Specialist in Endocrinology",
+      "qual": "MBBS (Hons I), FRACP MD",
+      "desc": "Associate Professor Andrew Weissberger is a consultant Endocrinologist at St Vincent's Private Hospital Sydney.<br>A/Prof Weissberger is committed to providing his patients with high quality care and has particular interest in general endocrinology, thyroid and pituitary disorders and diabetes.<br><br>A/Prof Weissberger is the Chairman of the Department of Endocrinology at St Vincent’s Clinic.",
+      "url": "./assets/Doctors/AW.jpeg"},
 
-    {"title": "Dr",
-      "firstname": "Otto",
-      "lastname": "Octopus",
-      "pos": "Specialist in Advanced Biomechanics & Cybernetics",
-      "qual": "M.D., Ph.D",
-      "desc": "Dr. Otto Octavius is a groundbreaking scientist and surgeon specializing in biomechanics and cybernetic enhancements. Once a respected researcher in atomic physics, a laboratory accident fused his advanced mechanical arms to his body, giving him unmatched precision and strength. With a mind as brilliant as his inventions, Dr. Octavius offers cutting-edge treatments in robotic-assisted surgery and neural interface technology. While his methods may sometimes challenge conventional ethics, his expertise in pushing the boundaries of human augmentation remains unparalleled. Patients seeking revolutionary solutions in prosthetics and cybernetics need look no further than Dr. Octavius' visionary approach to medicine.",
-      "url": "./assets/Doctors/Octopus.jpeg"}
+    {
+      "id": 3,
+      "title": "Dr",
+      "firstname": "Ken",
+      "lastname": "Ho",
+      "pos": "Specialist in Endocrinology",
+      "qual": "MBBS(Hons), MD, FRACP, FRCP(UK), FAHMS",
+      "desc": "Professor Ken Ho is a senior endocrinologist skilled in the management of pituitary and metabolic disorders, and hormone disorders of the thyroid, adrenal and reproductive organs.<br><br>Professor Ken Ho is a medical graduate of the University of Sydney and received a doctorate degree from the University of New South Wales (UNSW), before undertaking further training at the University of Virginia.<br><br>Ken is a recognised endocrinologist both nationally and internationally. He is a Past President of the Endocrine Society of Australia, and the recipient of its inaugural Senior Plenary Award. He’s also Past President of both the International Pituitary Society and the Growth Hormone Research Society, and the recipient of 2000 Visiting Trust Professor and the 2008 Asia Oceania Medal of the British Endocrine Society. In 2016, he was admitted as a Fellow of the Australian Academy of Health and Medical Science.<br><br>Ken is Conjoint Professor at UNSW and Emeritus Fellow at the Garvan Institute of Medical Research.",
+      "url": "./assets/Doctors/Ken.jpeg"
+    }
   ],
 
   "services": [

@@ -61,6 +61,22 @@ html, body {
   //max-width: 800px;
 
 }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Ensures the container is at least the full viewport height
+}
+
+.main-content {
+  flex: 1; // Pushes the footer down if there's not enough content
+}
+
+.main-body {
+  margin-top: 25px;
+}
+
+
 //
 //body {
 //  //background: var(--mat-sys-background);

@@ -49,6 +49,8 @@ ng generate component sitemap
 ng g interface breadcrumb
 
 ng generate component banner-logo
+ng generate component map-static
+ng generate component banner-contact
 
 #<a href="https://www.flaticon.com/free-icons/thyroid-gland" title="thyroid-gland icons">Thyroid-gland icons created by Vitaly Gorbachev - Flaticon</a>
 #<a href="https://www.flaticon.com/free-icons/testies" title="testies icons">Testies icons created by HAJICON - Flaticon</a>

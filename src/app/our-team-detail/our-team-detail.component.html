@@ -2,12 +2,13 @@
 <!--  <div class = profile-detail-button-container>-->
 <!--    <button mat-flat-button color="primary">Back to Doctors</button>-->
 <!--  </div>-->
-
+<div class = "page-container">
+  <div class = " main-body">
 <div class = "profile-detail-container">
   <div class = 'profile-detail-header'>
     <div>
-      <h2 > {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}</h2>
-      <p > {{ profile?.pos }} , {{ profile?.qual }}</p>
+      <h2> {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}</h2>
+      <p> {{ profile?.pos }} , {{ profile?.qual }}</p>
     </div>
     <div class = "separator">
     </div>
@@ -18,7 +19,7 @@
   </div>
 
   <div class = 'profile-detail-content'>
-    <h2 >About {{ profile?.title }} {{ profile?.lastname}}</h2>
+    <h4 >About {{ profile?.title }} {{ profile?.lastname}}</h4>
     <p >{{ profile?.desc }}
     </p>
     <div >
@@ -33,6 +34,8 @@
          alt="Exterior photo of {{ profile?.title }} {{ profile?.firstname}} {{ profile?.lastname}}"
          crossorigin
     />
+  </div>
+</div>
   </div>
 <!--</article>-->
 <!--<div class = "profile-detail">-->
