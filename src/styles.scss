@@ -74,6 +74,11 @@ html, body {
 
 .main-body {
   margin-top: 25px;
+  gap: 25px;
+  //margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  //margin-bottom: 25px;
 }
 
 
