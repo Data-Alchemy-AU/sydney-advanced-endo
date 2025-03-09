@@ -17,12 +17,25 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
+  // Add API route for local development to simulate GitHub Pages behavior
+  server.get('/api/services', (req, res) => {
+    const dbPath = join(serverDistFolder, 'src', 'assets', 'db.json');
+    try {
+      const db = require(dbPath);
+      res.json(db.services);
+    } catch (error) {
+      console.error('Error reading db.json:', error);
+      res.status(500).send('Error reading data');
+    }
+  });
+
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
   server.get('*.*', express.static(browserDistFolder, {
     maxAge: '1y'
   }));
+
 
   // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {

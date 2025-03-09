@@ -1,0 +1,83 @@
+{
+  "imageCarouselArray":[
+    {"url": "./assets/Carousel/image1.jpeg", "alt": "", "text": "Sydney Advanced Endocrinology"},
+    {"url": "./assets/Carousel/image2.jpeg", "alt": "", "text": "Sydney Advanced Endocrinology"},
+    {"url": "./assets/Carousel/image3.jpeg", "alt": "", "text": "Sydney Advanced Endocrinology"}
+  ],
+  "profiles":
+  [
+    {
+      "id": 1,
+      "title": "Dr",
+      "firstname": "Tamara",
+      "lastname": "Milder",
+      "pos": "Specialist in Endocrinology",
+      "qual": "MBBS (Hons 1), MMed (ClinEpi) FRACP, Ph.D",
+      "desc": "Dr Milder is an endocrinologist who has a PhD related to the use of medicines that protect the heart and kidney in people with type 2 diabetes.<br><br>She has over 20 peer-reviewed publications. Dr Milder had subspecialty training in management of type 2 and type 1 diabetes, and manages general endocrinology conditions including thyroid disease, osteoporosis and PCOS.",
+      "url": "./assets/Doctors/Tamie.jpeg"},
+
+    {
+      "id": 2,
+      "title": "A/Prof",
+      "firstname": "Andrew",
+      "lastname": "Weissberger",
+      "pos": "Specialist in Endocrinology",
+      "qual": "MBBS (Hons I), FRACP MD",
+      "desc": "Associate Professor Andrew Weissberger is a consultant Endocrinologist at St Vincent's Private Hospital Sydney.<br>A/Prof Weissberger is committed to providing his patients with high quality care and has particular interest in general endocrinology, thyroid and pituitary disorders and diabetes.<br><br>A/Prof Weissberger is the Chairman of the Department of Endocrinology at St Vincent’s Clinic.",
+      "url": "./assets/Doctors/AW.jpeg"},
+
+    {
+      "id": 3,
+      "title": "Dr",
+      "firstname": "Ken",
+      "lastname": "Ho",
+      "pos": "Specialist in Endocrinology",
+      "qual": "MBBS(Hons), MD, FRACP, FRCP(UK), FAHMS",
+      "desc": "Professor Ken Ho is a senior endocrinologist skilled in the management of pituitary and metabolic disorders, and hormone disorders of the thyroid, adrenal and reproductive organs.<br><br>Professor Ken Ho is a medical graduate of the University of Sydney and received a doctorate degree from the University of New South Wales (UNSW), before undertaking further training at the University of Virginia.<br><br>Ken is a recognised endocrinologist both nationally and internationally. He is a Past President of the Endocrine Society of Australia, and the recipient of its inaugural Senior Plenary Award. He’s also Past President of both the International Pituitary Society and the Growth Hormone Research Society, and the recipient of 2000 Visiting Trust Professor and the 2008 Asia Oceania Medal of the British Endocrine Society. In 2016, he was admitted as a Fellow of the Australian Academy of Health and Medical Science.<br><br>Ken is Conjoint Professor at UNSW and Emeritus Fellow at the Garvan Institute of Medical Research.",
+      "url": "./assets/Doctors/Ken.jpeg"
+    }
+  ],
+
+  "services": [
+    {
+      "name": "Type 1 diabetes",
+      "desc": "",
+      "url": "./assets/Services/diabetes.png"
+    },
+    {
+      "name": "Type 2 diabetes",
+      "desc": "",
+      "url": "./assets/Services/diabetes.png"
+    },
+    {
+      "name": "Obesity/weight loss",
+      "desc": "",
+      "url": "./assets/Services/weight-loss.png"
+    },
+    {
+      "name": "Menstrual and hormonal disorders",
+      "desc": "Menstrual irregularities, hirsutism (excessive growth of dark hairs) & polycystic ovarian syndrome",
+      "url": "./assets/Services/menstrual.png"
+    },
+    {
+      "name": "Thyroid disorders",
+      "desc": "",
+      "url": "./assets/Services/thyroid-gland.png"
+    },
+    {
+      "name": "Menopause",
+      "desc": "",
+      "url": "./assets/Services/menopause.png"
+    },
+    {
+      "name": "Pituitary disorders",
+      "desc": "Hormone dysfunction, pituitary lesions.",
+      "url": "./assets/Services/pituitary.png"
+    },
+    {
+      "name": "Adrenal disorders",
+      "desc": "hormone dysfunction, adrenal lesions.",
+      "url": "./assets/Services/adrenal-gland.png"
+    }
+  ]
+}
