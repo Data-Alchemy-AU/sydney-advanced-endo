@@ -1,0 +1,51 @@
+.contact-form-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+
+  button {
+    min-width: 120px;
+    padding: 0.5rem 1.5rem;
+
+    mat-spinner {
+      margin: 0 auto;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 600px) {
+  .contact-form-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .form-actions {
+    justify-content: center;
+  }
+}
