@@ -23,21 +23,26 @@ import {catchError, map, Observable, of} from "rxjs";
 //   }
 // }
 export class ServicesService {
-  // Use a relative path that works in both dev and production
-  private url = environment.production
-    ? './assets/db.json'
-    : `${environment.apiUrl}/services`;
-
   constructor(private http: HttpClient) {}
 
   getAllServices(): Observable<Service[]> {
-    return this.http.get<any>(this.url).pipe(
-      // Extract services from the response when using the static JSON file
-      map(response => environment.production ? response.services : response),
-      catchError(error => {
-        console.error('Error fetching services:', error);
-        return of([]);
-      })
-    );
+    if (environment.production) {
+      // Use environment.apiUrl directly for production
+      return this.http.get<any>(environment.apiUrl).pipe(
+        map(response => response.services),
+        catchError(error => {
+          console.error('Error fetching services:', error);
+          return of([]);
+        })
+      );
+    } else {
+      // In development, append '/services' to the API URL
+      return this.http.get<Service[]>(`${environment.apiUrl}/services`).pipe(
+        catchError(error => {
+          console.error('Error fetching services:', error);
+          return of([]);
+        })
+      );
+    }
   }
 }

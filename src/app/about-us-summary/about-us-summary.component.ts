@@ -14,10 +14,4 @@ import {MatCardModule} from "@angular/material/card";
   styleUrl: './about-us-summary.component.scss'
 })
 export class AboutUsSummaryComponent {
-  clinicName: string = "";
-  constructor(private clinicService: ClinicService) { }
-
-  ngOnInit(){
-    this.clinicName = this.clinicService.getClinicName();
-  }
 }

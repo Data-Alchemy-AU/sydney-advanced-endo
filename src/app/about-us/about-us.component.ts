@@ -13,12 +13,5 @@ import {BannerLogoComponent} from "../banner-logo/banner-logo.component";
   standalone: true,
   styleUrl: './about-us.component.scss'
 })
-export class AboutUsComponent implements OnInit {
-  clinicName: string = "";
-
-  constructor(private clinicService: ClinicService) { }
-
-  ngOnInit(){
-    this.clinicName = this.clinicService.getClinicName();
-  }
+export class AboutUsComponent {
 }
