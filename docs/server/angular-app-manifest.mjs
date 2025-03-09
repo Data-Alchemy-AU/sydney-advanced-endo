@@ -8,14 +8,14 @@ export default {
   entryPointToBrowserMapping: {
   "node_modules/@angular/animations/fesm2022/browser.mjs": [
     {
-      "path": "chunk-5OCLPIVI.js",
+      "path": "chunk-E5SI7OEM.js",
       "dynamicImport": false
     }
   ]
 },
   assets: {
-    'index.csr.html': {size: 96213, hash: '0ee4ebd19acbaec92a287cb63a7ebc6c0989c2021d059d28e597952998b157da', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 37576, hash: 'ca2792e203a0e175198f537e021ceae966f4a7c392fabf205f8362dd843916d5', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 96213, hash: 'd2dbddb5ba55882cf9de67f66f9dd91118a98bbf8b59144323bed9338c6e5095', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 37576, hash: 'd37af8f97a45929de9cffc71373b65d35e0e628c151da10b2f833115d1599583', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
     'styles-75BB3TAX.css': {size: 83629, hash: 'lzcAf9fp66U', text: () => import('./assets-chunks/styles-75BB3TAX_css.mjs').then(m => m.default)}
   },
 };
