@@ -1,12 +1,3 @@
 {
-  "routes": {
-    "/sydney-advanced-endo": {},
-    "/sydney-advanced-endo/about-us": {},
-    "/sydney-advanced-endo/contact-us": {},
-    "/sydney-advanced-endo/enquire": {},
-    "/sydney-advanced-endo/home": {},
-    "/sydney-advanced-endo/our-team": {},
-    "/sydney-advanced-endo/services": {},
-    "/sydney-advanced-endo/sitemap": {}
-  }
+  "routes": {}
 }
