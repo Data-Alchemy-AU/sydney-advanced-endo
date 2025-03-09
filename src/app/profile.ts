@@ -5,6 +5,8 @@ export interface Profile {
   lastname: string;
   pos: string;
   qual: string;
-  desc: string;
+  desc: string[];
   url: string;
+  centerX: string;
+  centerY: string;
 }

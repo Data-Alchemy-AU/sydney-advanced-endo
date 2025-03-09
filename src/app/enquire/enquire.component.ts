@@ -133,10 +133,10 @@ export class EnquireComponent {
 
       setTimeout(() => {
         // Show thank you dialog
-        this.dialog.open(ThankYouDialogComponent, {
-          width: '400px',
-          disableClose: false
-        });
+        // this.dialog.open(ThankYouDialogComponent, {
+        //   width: '400px',
+        //   disableClose: false
+        // });
 
         // Reset form properly
         this.contactForm.reset();
@@ -153,6 +153,10 @@ export class EnquireComponent {
         });
 
         this.isSubmitting = false;
+
+        // Refresh the page
+        window.location.reload();
+
       }, 1000);
     }
   }

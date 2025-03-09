@@ -25,26 +25,24 @@
   .profile-detail-image-container {
 
     .profile-detail-image {
-      height: 600px;
+      height: 400px;
+      //height: auto;
       width: 100%;
+      min-width: 360px;
       object-fit: cover;
       border-radius: 30px;
     }
   }
 
   .profile-detail-content {
-    //grid-column: 1/1;
-    //grid-row:2/2;
-    //border: blue solid 1px;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     grid-template-columns: 1fr;
 
     .profile-detail-header {
-      //border: green solid 1px;
     }
 
     .button-container {
