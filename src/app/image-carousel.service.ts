@@ -48,45 +48,25 @@ export class ImageCarouselService {
   constructor(private http: HttpClient) {}
 
   getAllImageCarouselItems(): Observable<Result[]> {
-    if (environment.production) {
-      // Use environment.apiUrl directly for production
-      return this.http.get<any>(environment.apiUrl).pipe(
-        map(response => response.imageCarouselArray),
-        catchError(error => {
-          console.error('Error fetching image carousel items:', error);
-          return of([]);
-        })
-      );
-    } else {
-      // In development, append '/imageCarouselArray' to the API URL
-      return this.http.get<Result[]>(`${environment.apiUrl}/imageCarouselArray`).pipe(
-        catchError(error => {
-          console.error('Error fetching image URLs:', error);
-          return of([]);
-        })
-      );
-    }
+    return this.http.get<any>(environment.apiUrl).pipe(
+      map(response => response.imageCarouselArray || []),
+      catchError(error => {
+        console.error('Error fetching image carousel items:', error);
+        return of([]);
+      })
+    );
   }
 
   getImageCarouselItemById(id: number): Observable<undefined | Result> {
-    if (environment.production) {
-      return this.http.get<any>(environment.apiUrl).pipe(
-        map(response => {
-          const items = response.imageCarouselArray || [];
-          return items.find((item: Result) => item.id === id);
-        }),
-        catchError(error => {
-          console.error(`Error fetching image ${id}:`, error);
-          return of(undefined);
-        })
-      );
-    } else {
-      return this.http.get<Result>(`${environment.apiUrl}/imageCarouselArray/${id}`).pipe(
-        catchError(error => {
-          console.error(`Error fetching image ${id}: `, error);
-          return of(undefined);
-        })
-      );
-    }
+    return this.http.get<any>(environment.apiUrl).pipe(
+      map(response => {
+        const items = response.imageCarouselArray || [];
+        return items.find((item: Result) => item.id === id);
+      }),
+      catchError(error => {
+        console.error(`Error fetching image ${id}:`, error);
+        return of(undefined);
+      })
+    );
   }
 }
