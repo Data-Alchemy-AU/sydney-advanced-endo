@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
@@ -74,6 +74,10 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 export class EnquireComponent {
   contactForm: FormGroup;
   isSubmitting = false;
+  // selectedFile: File | null = null;
+
+  // @ViewChild('fileInput') fileInput!: ElementRef;
+
 
   constructor(
     private fb: FormBuilder,
@@ -88,6 +92,14 @@ export class EnquireComponent {
     });
   }
 
+  // attachment
+  // onFileSelected(event: any): void {
+  //   if (event.target.files.length > 0) {
+  //     this.selectedFile = event.target.files[0];
+  //   }
+  // }
+
+  // generate email
   onSubmit(): void {
     if (this.contactForm.valid) {
       this.isSubmitting = true;
@@ -105,6 +117,12 @@ export class EnquireComponent {
       let body = `Name: ${formValues.name}\n`;
       body += `Email: ${formValues.email}\n`;
       body += `Phone: ${formValues.phone || 'Not provided'}\n\n`;
+
+      // Add file info if selected
+      // if (this.selectedFile) {
+      //   body += `Attachment: ${this.selectedFile.name} (Please add the attachment manually)\n\n`;
+      // }
+
       body += `Message:\n${formValues.message}`;
 
       // Create mailto URL with encoded parameters
@@ -122,6 +140,10 @@ export class EnquireComponent {
 
         // Reset form properly
         this.contactForm.reset();
+        // this.selectedFile = null;
+        // if (this.fileInput) {
+        //   this.fileInput.nativeElement.value = '';
+        // }
 
         // Reset validation state
         Object.keys(this.contactForm.controls).forEach(key => {

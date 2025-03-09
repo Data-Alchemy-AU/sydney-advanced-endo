@@ -38,6 +38,31 @@ p {
   }
 }
 
+//.file-upload-container {
+//  margin-bottom: 1.5rem;
+//
+//  label {
+//    display: block;
+//    margin-bottom: 0.5rem;
+//    font-weight: 500;
+//    color: rgba(0, 0, 0, 0.6);
+//  }
+//
+//  input[type="file"] {
+//    width: 100%;
+//    padding: 8px;
+//    border: 1px solid #e0e0e0;
+//    border-radius: 4px;
+//  }
+//
+//  .hint-text {
+//    margin-top: 0.5rem;
+//    font-size: 0.8rem;
+//    color: rgba(0, 0, 0, 0.54);
+//    font-style: italic;
+//  }
+//}
+
 // Responsive adjustments
 @media (max-width: 600px) {
   .contact-form-container {

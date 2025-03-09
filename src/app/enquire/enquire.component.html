@@ -49,6 +49,13 @@
       <mat-error *ngIf="contactForm.get('message')?.hasError('required')">Message is required</mat-error>
       <mat-error *ngIf="contactForm.get('message')?.hasError('minlength')">Message must be at least 10 characters</mat-error>
     </mat-form-field>
+
+<!--    <div class="file-upload-container">-->
+<!--      <label>Attachment (optional)</label>-->
+<!--      <input type="file" (change)="onFileSelected($event)" #fileInput>-->
+<!--      <p class="hint-text">After your email client opens, you'll need to manually attach this file</p>-->
+<!--    </div>-->
+
     <div class="form-actions">
       <button mat-flat-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
         <span *ngIf="!isSubmitting">Submit</span>
