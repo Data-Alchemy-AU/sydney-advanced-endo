@@ -1,16 +1,17 @@
-<div >
+<!--<div >-->
   <mat-card appearance="outlined" class = "service-card">
     <mat-card-header>
       <img mat-card-avatar [src]=service.url alt="icon for {{service.name}}" class = "service-card-image">
       <mat-card-title>{{ service.name}}</mat-card-title>
     </mat-card-header>
-    <mat-card-content class = "service-card-content">
+<!--    only fill in content if service desc is not null or an empty string -->
+    <mat-card-content *ngIf="service.desc && service.desc.trim()" class = "service-card-content">
       <p>
       {{service.desc}}
       </p>
     </mat-card-content>
   </mat-card>
-</div>
+<!--</div>-->
 
 <!--<mat-card-header>-->
 <!--  <div mat-card-avatar class="example-header-image"></div>-->

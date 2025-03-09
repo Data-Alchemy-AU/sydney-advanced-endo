@@ -1,20 +1,35 @@
-:host {
+//:host {
+//  display: flex;
+//  justify-content: center;
+  //height: 100%; // Ensures `app-service-card` expands inside grid
+  //width: 100%; // Add this to make it fill the host width
+  //align-self: stretch; // Stretch to parent container
+//}
+
+.service-card-container {
   display: flex;
-  height: 100%; // Ensures `app-service-card` expands inside grid
+  justify-content: center;
 }
 
 .service-card {
+  height: 100%; // Ensures uniform height
+  width: 100%; // Add this to make it fill the host width
   display: flex;
   flex-direction: column;
-  flex-grow: 1; // Allows content to expand
-  height: 100%; // Ensures uniform height
+  flex: 1 1 100%; // Use shorthand to control growth, shrink and basis
+  //flex-grow: 1; // Allows content to expand
+
+  align-self: stretch; // Forces the item to stretch to fill the cross-axis
+
 
   &-image {
-    background-size: cover;
+    background-size: contain;
+    border-radius: 0 ; // Remove circular shape
+    overflow: visible ; // Allow content outside boundary
   }
 
   &-content{
-    flex-grow: 1; // Pushes content to fill available space
+    //flex-grow: 1; // Pushes content to fill available space
   }
 }
 

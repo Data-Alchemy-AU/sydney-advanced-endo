@@ -40,34 +40,44 @@
 
   "services": [
     {
-      "name": "Stimpak",
-      "desc": "A fast-acting medical treatment that accelerates wound healing and restores vitality.",
-      "url": "./assets/Services/adrenal-gland.png"
+      "name": "Type 1 diabetes",
+      "desc": "",
+      "url": "./assets/Services/diabetes.png"
     },
     {
-      "name": "RadAway",
-      "desc": "A powerful detox agent designed to flush out harmful radiation from the body.",
-      "url": "./assets/Services/ovary.png"
+      "name": "Type 2 diabetes",
+      "desc": "",
+      "url": "./assets/Services/diabetes.png"
     },
     {
-      "name": "Doctors Bag",
-      "desc": "A comprehensive medical kit containing essential tools for treating injuries and ailments.",
-      "url": "./assets/Services/pituitary.png"
+      "name": "Obesity/weight loss",
+      "desc": "",
+      "url": "./assets/Services/weight-loss.png"
     },
     {
-      "name": "Med-X",
-      "desc": "A potent painkiller that numbs pain and boosts resistance to physical damage.",
-      "url": "./assets/Services/testicle.png"
+      "name": "Menstrual and hormonal disorders",
+      "desc": "Menstrual irregularities, hirsutism (excessive growth of dark hairs) & polycystic ovarian syndrome",
+      "url": "./assets/Services/menstrual.png"
     },
     {
-      "name": "Rad-X",
-      "desc": "A preventative treatment that enhances radiation resistance before exposure.",
+      "name": "Thyroid disorders",
+      "desc": "",
       "url": "./assets/Services/thyroid-gland.png"
     },
     {
-      "name": "PartyTime Mentats",
-      "desc": "A cognitive enhancer that sharpens focus and boosts charisma for social situations.",
-      "url": "./assets/Services/hormonal-imbalance.png"
+      "name": "Menopause",
+      "desc": "",
+      "url": "./assets/Services/menopause.png"
+    },
+    {
+      "name": "Pituitary disorders",
+      "desc": "Hormone dysfunction, pituitary lesions.",
+      "url": "./assets/Services/pituitary.png"
+    },
+    {
+      "name": "Adrenal disorders",
+      "desc": "hormone dysfunction, adrenal lesions.",
+      "url": "./assets/Services/adrenal-gland.png"
     }
   ]
 }
