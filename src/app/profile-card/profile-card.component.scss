@@ -1,6 +1,7 @@
 .profile-card {
   display: flex;
   justify-content: center;
+
   //width: 100%;
   //width: 300px;
 
@@ -12,6 +13,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    //gap: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   &-align-middle {
@@ -21,6 +25,7 @@
     padding: 8px; // Adds spacing between child elements
     display: flex;
     flex-direction: column; // column layout
+    cursor: pointer; /* Changes cursor to pointer for better UX */
   }
 
   &-image {
