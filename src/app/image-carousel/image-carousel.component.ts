@@ -109,4 +109,11 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
       this.autoPlayInterval = null;
     }
   }
+
+  getImageStyle(image: Result): any {
+    return {
+      'background-image': `url(${image.url})`,
+      'background-position': `${image.centerX} ${image.centerY}`
+    };
+  }
 }

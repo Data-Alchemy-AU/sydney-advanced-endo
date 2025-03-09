@@ -2,13 +2,8 @@
 $image-max-height: 600px; // ✅ Limits image height
 
 .mat-card-header {
-  //$main-color: $my-color;
-  //background-color: $main-color;
   background-color: var(--custom-primary);
   color: var(--custom-on-primary);
-
-  //color: white;
-  //color: white;
 }
 
 .banner-container {
@@ -16,24 +11,7 @@ $image-max-height: 600px; // ✅ Limits image height
   align-items: center; // ✅ Ensures logos and tagline are aligned
   justify-content: space-between; // ✅ Spreads logos on the left & tagline on the right
   width: 100%;
-  //padding-left: 10px ;
   background: linear-gradient(75deg,  var(--custom-primary) 0% 40%, white 70%);
-
-//.banner-logos {
-//  display: flex;
-//  align-items: center;
-//  justify-content: end;
-//  gap: 5%; // Space between logos
-//  padding: 1%;
-//  flex-wrap: nowrap; // Prevents logos from breaking on small screens
-//  //background-color: var(--mat-mdc-theme-primary) !important;
-//  //background-color: linear-gradient(90deg, white, var(--mat-mdc-theme-primary), #4B6CB7, #182848); // Adjust colors as needed
-//  //background: linear-gradient(90deg,  var(--custom-primary) , white 50%);
-//  //background: linear-gradient(90deg, white 20%, var(--custom-primary) 50%, white 80%);
-//
-//  //border: #93000a solid 1px;
-//  height: 10vh; // The container's height scales with the viewport
-//  overflow: hidden;
 
   .banner-logos {
     display: flex;
@@ -41,30 +19,25 @@ $image-max-height: 600px; // ✅ Limits image height
     column-gap: 10px; // ✅ Adds space between logos
     justify-content: end;
     flex-wrap: wrap;
+
     .logo {
       height: 80px;  // Uniform height
       width: auto;   // Maintain aspect ratio
       max-width: 50%; // ✅ Ensures logos scale with screen width
       object-fit: contain;
-      //float: right;
-      //border: #93000a solid 1px;
     }
-    //.logo {
-    //  max-width: 25%;
-    //  max-height: 80px;
-    //  width: auto;
-    //  object-fit: contain;
-    //}
   }
-    .tagline {
-      text-align: left; // ✅ Aligns text to the left
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--custom-on-primary);
-      max-width: 50%; // ✅ Prevents tagline from taking up too much space
-      padding: 1%;
-    }
+
+  .tagline {
+    text-align: left; // ✅ Aligns text to the left
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--custom-on-primary);
+    max-width: 50%; // ✅ Prevents tagline from taking up too much space
+    padding: 1%;
+  }
 }
+
 .image-container {
   width: 100%;
   height: 600px;
@@ -82,3 +55,16 @@ $image-max-height: 600px; // ✅ Limits image height
 }
 
 
+@media (max-width: 600px) {
+
+  .image-container {
+    height: 300px; // Adjust image height for small screens
+  }
+
+  @media (min-width: 1200px) {
+
+    .image-container {
+      height: 800px; // Adjust image height for large screens
+    }
+  }
+}

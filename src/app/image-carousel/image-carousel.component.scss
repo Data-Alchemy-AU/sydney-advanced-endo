@@ -79,8 +79,27 @@
       }
     }
   }
-}
 
+  @media (max-width: 600px) {
+    .slides {
+      height: 300px; // Adjust the height for smaller screens
+    }
+
+    .slide {
+      background-size: contain; // Prevent zooming in too much on small screens
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .slides {
+      height: 600px; // Adjust the height for larger screens
+    }
+
+    .slide {
+      background-size: contain; // Ensure the entire image is visible on large screens
+    }
+  }
+}
 
 .mat-card-header {
   //$main-color: $my-color;
@@ -146,4 +165,5 @@
     padding: 1%;
   }
 }
+
 
