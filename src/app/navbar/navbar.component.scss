@@ -23,15 +23,17 @@
     height: 100%; /* Maintains aspect ratio */
     display: inline-block; /* Ensures the button wraps tightly around the SVG */
 
-
     .button {
       border: none; /* Removes any default border */
+      //border: #0b5528 2pt solid;
       text-decoration: none; /* Removes underline from link */
       height: inherit;
       display: flex;
+      padding: 0;
+      margin: 0;
       border-radius: 0; /* Remove rounded corners */
       margin: 0;
-      padding-left: 0;
+      align-items: left;
     }
 
   }
@@ -39,7 +41,7 @@
   .nav-buttons {
     display: flex; /* Use flexbox to align buttons */
     //flex-direction: row;
-    gap: 1px; /* Adds spacing between buttons */
+    gap: 2px; /* Adds spacing between buttons */
     justify-content: space-between; /* Centers the buttons horizontally */
     align-items: center; /* Aligns buttons vertically */
     flex-wrap: wrap; /* Allows buttons to wrap if needed */

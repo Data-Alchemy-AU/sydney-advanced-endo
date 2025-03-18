@@ -22,11 +22,16 @@
 // Ensure your theme is defined
 $my-primary: mat.get-theme-color(custom-theme.$custom-theme, primary);
 $my-on-primary: mat.get-theme-color(custom-theme.$custom-theme, on-primary);
+$custom-secondary: mat.get-theme-color(custom-theme.$custom-theme, secondary);
+$custom-tertiary: mat.get-theme-color(custom-theme.$custom-theme, tertiary);
 
 // Define CSS variables for global use
 :root {
   --custom-primary: #{$my-primary};
   --custom-on-primary: #{$my-on-primary};
+  --custom-secondary: #{$custom-secondary};
+  --custom-tertiary: #{$custom-tertiary};
+
 }
 
 //:root {
