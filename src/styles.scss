@@ -23,14 +23,20 @@
 $my-primary: mat.get-theme-color(custom-theme.$custom-theme, primary);
 $my-on-primary: mat.get-theme-color(custom-theme.$custom-theme, on-primary);
 $custom-secondary: mat.get-theme-color(custom-theme.$custom-theme, secondary);
+$my-on-secondary: mat.get-theme-color(custom-theme.$custom-theme, on-secondary);
 $custom-tertiary: mat.get-theme-color(custom-theme.$custom-theme, tertiary);
+$my-on-tertiary: mat.get-theme-color(custom-theme.$custom-theme, on-tertiary);
+$my-on-surface: mat.get-theme-color(custom-theme.$custom-theme, on-surface);
 
 // Define CSS variables for global use
 :root {
   --custom-primary: #{$my-primary};
   --custom-on-primary: #{$my-on-primary};
   --custom-secondary: #{$custom-secondary};
+  --custom-on-secondary: #{$my-on-secondary};
   --custom-tertiary: #{$custom-tertiary};
+  --custom-on-tertiary: #{$my-on-tertiary};
+  --custom-on-surface: #{$my-on-surface};
 
 }
 

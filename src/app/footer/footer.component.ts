@@ -4,11 +4,12 @@ import {LogoComponent} from "../logo/logo.component";
 import {MatAnchor} from "@angular/material/button";
 import {MatToolbar} from "@angular/material/toolbar";
 import {MatDivider} from "@angular/material/divider";
+import {LogoAdvancedComponent} from "../logo-advanced/logo-advanced.component";
 
 @Component({
   selector: 'app-footer',
     imports: [
-        RouterLink, LogoComponent, MatAnchor, MatToolbar, MatDivider
+        RouterLink, LogoComponent, MatAnchor, MatToolbar, MatDivider, LogoAdvancedComponent
     ],
   templateUrl: './footer.component.html',
   standalone: true,
