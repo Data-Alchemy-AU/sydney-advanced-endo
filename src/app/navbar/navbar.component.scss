@@ -1,6 +1,4 @@
 @use '@angular/material' as mat;
-@use "../../styles/styles_theme-colors" as theme-colors;
-
 
 .fixed-header {
   position: sticky;
@@ -32,10 +30,8 @@
       padding: 0;
       margin: 0;
       border-radius: 0; /* Remove rounded corners */
-      margin: 0;
-      align-items: left;
+      align-items: start;
     }
-
   }
 
   .nav-buttons {
@@ -81,4 +77,24 @@
   .burger-menu {
     display: none;
   }
+}
+
+/* Remove any fixed height from the sidenav container so the header stays natural */
+mat-sidenav-container {
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+
+/* Set a fixed width for the mobile sidenav */
+.mobile-sidenav {
+  width: 250px;
+  z-index: 10000 !important;
+  border-radius: 0;
+}
+/* Container for the close button */
+.sidenav-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px;
 }

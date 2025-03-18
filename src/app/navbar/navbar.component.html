@@ -1,36 +1,48 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    fixedInViewport [fixedTopGap]="64"
+    mode="over"
+    position="end"
+    class="mobile-sidenav">
+    <div class="sidenav-header">
+      <button mat-icon-button class="close-btn" (click)="sidenav.close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" (click)="sidenav.close()">Home</a>
+      <a mat-list-item routerLink="/about-us" (click)="sidenav.close()">About Us</a>
+      <a mat-list-item routerLink="/our-team" (click)="sidenav.close()">Our Team</a>
+      <a mat-list-item routerLink="/services" (click)="sidenav.close()">Services</a>
+      <a mat-list-item routerLink="/contact-us" (click)="sidenav.close()">Contact Us</a>
+      <a mat-list-item routerLink="/enquire" (click)="sidenav.close()" class="primary">Enquire</a>
+    </mat-nav-list>
+  </mat-sidenav>
 
-<mat-toolbar  class=fixed-header>
-<!--  <span>-->
-  <div class = logo-container>
-  <button mat-button [routerLink] = "'/home'" class="button" color="primary">
-    <app-logo-advanced></app-logo-advanced>
-  </button>
-  </div>
+  <mat-sidenav-content>
+    <mat-toolbar class="fixed-header">
+      <div class="logo-container">
+        <button mat-button [routerLink]="'/home'" class="button" color="primary">
+          <app-logo-advanced></app-logo-advanced>
+        </button>
+      </div>
 
-  <!-- Desktop Navigation Buttons -->
-  <span class="nav-buttons">
-    <app-button-shared buttonType="home" variant="basic" color = 'default' ></app-button-shared> <!-- Forces flat -->
-    <app-button-shared buttonType="about-us" variant="basic" color = 'default' ></app-button-shared> <!-- Forces flat -->
-    <app-button-shared buttonType="our-team" variant="basic" color = 'default'></app-button-shared> <!-- Forces flat -->
-    <app-button-shared buttonType="services" variant="basic" color = 'default'></app-button-shared> <!-- Forces flat -->
-    <app-button-shared buttonType="contact-us" variant="basic" color = 'default'></app-button-shared> <!-- Forces flat -->
-    <app-button-shared buttonType="enquire" variant="flat" color="primary"></app-button-shared> <!-- Forces flat -->
-   </span>
+      <!-- Desktop Navigation Buttons -->
+      <span class="nav-buttons">
+        <app-button-shared buttonType="home" variant="basic" color="default"></app-button-shared>
+        <app-button-shared buttonType="about-us" variant="basic" color="default"></app-button-shared>
+        <app-button-shared buttonType="our-team" variant="basic" color="default"></app-button-shared>
+        <app-button-shared buttonType="services" variant="basic" color="default"></app-button-shared>
+        <app-button-shared buttonType="contact-us" variant="basic" color="default"></app-button-shared>
+        <app-button-shared buttonType="enquire" variant="flat" color="primary"></app-button-shared>
+      </span>
 
-
-  <!-- Mobile Menu (Hidden on Desktop) -->
-  <button mat-icon-button class="burger-menu" [matMenuTriggerFor]="mobileMenu">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <mat-menu #mobileMenu="matMenu">
-    <button mat-menu-item routerLink="/home">Home</button>
-    <button mat-menu-item routerLink="/about-us">About Us</button>
-    <button mat-menu-item routerLink="/our-team">Our Team</button>
-    <button mat-menu-item routerLink="/services">Services</button>
-    <button mat-menu-item routerLink="/contact-us">Contact Us</button>
-    <button mat-menu-item routerLink="/enquire" color="primary">Enquire</button>
-  </mat-menu>
-</mat-toolbar>
-<mat-divider></mat-divider>
-
+      <!-- Mobile Menu (Hidden on Desktop) -->
+      <button mat-icon-button class="burger-menu" (click)="$event.stopPropagation(); sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+  </mat-sidenav-content>
+</mat-sidenav-container>
