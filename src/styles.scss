@@ -3,42 +3,42 @@
 // For more information: https://material.angular.io/guide/theming
 
 @use '@angular/material' as mat;
-@use "./styles/styles_theme-colors" as theme-colors;
-@use "./styles/themes/custom-theme" as custom-theme;
+//@use "./styles/styles_theme-colors" as theme-colors;
+//@use "./styles/themes/custom-theme" as custom-theme;
+
+@import "./styles/theme-st-vincents";
 
 @include mat.core();
 //@include mat.theme(custom-theme.$theme);
 //@include mat.typography-hierarchy(custom-theme.$theme);
 
-:root,html {
-  @include mat.theme(custom-theme.$custom-theme);
-  @include mat.all-component-themes(custom-theme.$custom-theme);
-  @include mat.typography-hierarchy(custom-theme.$custom-theme);
-  @include mat.all-component-typographies(custom-theme.$custom-theme);
-  @include mat.color-variants-backwards-compatibility(custom-theme.$custom-theme);
-
-}
+//:root,html {
+//  @include mat.theme(custom-theme.$custom-theme);
+//  @include mat.all-component-themes(custom-theme.$custom-theme);
+//  @include mat.typography-hierarchy(custom-theme.$custom-theme);
+//  @include mat.all-component-typographies(custom-theme.$custom-theme);
+//  @include mat.color-variants-backwards-compatibility(custom-theme.$custom-theme);
+//}
 
 // Ensure your theme is defined
-$my-primary: mat.get-theme-color(custom-theme.$custom-theme, primary);
-$my-on-primary: mat.get-theme-color(custom-theme.$custom-theme, on-primary);
-$custom-secondary: mat.get-theme-color(custom-theme.$custom-theme, secondary);
-$my-on-secondary: mat.get-theme-color(custom-theme.$custom-theme, on-secondary);
-$custom-tertiary: mat.get-theme-color(custom-theme.$custom-theme, tertiary);
-$my-on-tertiary: mat.get-theme-color(custom-theme.$custom-theme, on-tertiary);
-$my-on-surface: mat.get-theme-color(custom-theme.$custom-theme, on-surface);
-
-// Define CSS variables for global use
-:root {
-  --custom-primary: #{$my-primary};
-  --custom-on-primary: #{$my-on-primary};
-  --custom-secondary: #{$custom-secondary};
-  --custom-on-secondary: #{$my-on-secondary};
-  --custom-tertiary: #{$custom-tertiary};
-  --custom-on-tertiary: #{$my-on-tertiary};
-  --custom-on-surface: #{$my-on-surface};
-
-}
+//$my-primary: mat.get-theme-color(custom-theme.$custom-theme, primary);
+//$my-on-primary: mat.get-theme-color(custom-theme.$custom-theme, on-primary);
+//$custom-secondary: mat.get-theme-color(custom-theme.$custom-theme, secondary);
+//$my-on-secondary: mat.get-theme-color(custom-theme.$custom-theme, on-secondary);
+//$custom-tertiary: mat.get-theme-color(custom-theme.$custom-theme, tertiary);
+//$my-on-tertiary: mat.get-theme-color(custom-theme.$custom-theme, on-tertiary);
+//$my-on-surface: mat.get-theme-color(custom-theme.$custom-theme, on-surface);
+//
+//// Define CSS variables for global use
+//:root {
+//  --custom-primary: #{$my-primary};
+//  --custom-on-primary: #{$my-on-primary};
+//  --custom-secondary: #{$custom-secondary};
+//  --custom-on-secondary: #{$my-on-secondary};
+//  --custom-tertiary: #{$custom-tertiary};
+//  --custom-on-tertiary: #{$my-on-tertiary};
+//  --custom-on-surface: #{$my-on-surface};
+//}
 
 //:root {
 //  --app-primary: mat.get-theme-color(custom-theme.$custom-theme, primary, default);

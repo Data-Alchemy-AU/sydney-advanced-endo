@@ -1,0 +1,7 @@
+// theme-green.scss
+@use './themes/styles_theme-green-colors' as theme;
+@use 'custom-theme-base';
+
+.theme-green {
+  @include custom-theme-base.apply-theme(theme.$primary-palette, theme.$tertiary-palette);
+}

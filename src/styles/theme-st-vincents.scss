@@ -1,0 +1,7 @@
+// theme-st-vincents
+@use './themes/styles_theme-st-vincents-colors' as theme;
+@use 'custom-theme-base';
+
+.theme-st-vincents {
+  @include custom-theme-base.apply-theme(theme.$primary-palette, theme.$tertiary-palette);
+}

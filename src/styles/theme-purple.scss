@@ -1,0 +1,7 @@
+// theme-purple.scss
+@use './themes/styles_theme-purple-colors' as theme;
+@use 'custom-theme-base';
+
+.theme-purple {
+  @include custom-theme-base.apply-theme(theme.$primary-palette, theme.$tertiary-palette);
+}
