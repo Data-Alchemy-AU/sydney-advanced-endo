@@ -65,7 +65,11 @@ ng generate component banner-contact
 <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>
 
 mkdir -p docs
-ng build --configuration=production --output-path docs --base-href /sydney-advnaced-endo/
+rm -rf docs
+ng build --configuration=production --base-href /sydney-advnaced-endo/
+
+ng build --output-path docs --base-href /your_project_name/
+
 touch docs/.nojekyll
 npx angular-cli-ghpages --dir=docs
-
+touch docs/404.html
