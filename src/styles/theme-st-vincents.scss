@@ -5,3 +5,4 @@
 .theme-st-vincents {
   @include custom-theme-base.apply-theme(theme.$primary-palette, theme.$tertiary-palette);
 }
+

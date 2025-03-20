@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
-@use "themes/styles_theme-purple-colors" as theme-colors;
+//@use "themes/styles_theme-purple-colors" as theme-colors;
 //@use "themes/styles_theme-green-colors" as theme-colors;
-//@use "themes/styles_theme-st-vincents-colors" as the-colors;
+@use "themes/styles_theme-st-vincents-colors" as theme-colors;
 
 //$custom-primary: theme-colors.$primary-palette;
 //$custom-tertiary theme-colors.$tertiary-palette;

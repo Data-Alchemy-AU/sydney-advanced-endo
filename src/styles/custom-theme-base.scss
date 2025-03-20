@@ -22,21 +22,23 @@
       )
   );
 
-  @include mat.theme($custom-theme);
-  @include mat.all-component-themes($custom-theme);
-  @include mat.typography-hierarchy($custom-theme);
-  @include mat.all-component-typographies($custom-theme);
-  @include mat.color-variants-backwards-compatibility($custom-theme);
-
+    @include mat.theme($custom-theme);
+    @include mat.all-component-themes($custom-theme);
+    @include mat.typography-hierarchy($custom-theme);
+    @include mat.all-component-typographies($custom-theme);
+    @include mat.all-component-colors($custom-theme);
+    @include mat.color-variants-backwards-compatibility($custom-theme);
 
   // Output the CSS custom properties.
   // These declarations will be output when the mixin is used inside a CSS rule.
-  --custom-primary: #{mat.get-theme-color($custom-theme, primary)};
-  --custom-on-primary: #{mat.get-theme-color($custom-theme, on-primary)};
-  --custom-secondary: #{mat.get-theme-color($custom-theme, secondary)};
-  --custom-on-secondary: #{mat.get-theme-color($custom-theme, on-secondary)};
-  --custom-tertiary: #{mat.get-theme-color($custom-theme, tertiary)};
-  --custom-on-tertiary: #{mat.get-theme-color($custom-theme, on-tertiary)};
-  --custom-on-surface: #{mat.get-theme-color($custom-theme, on-surface)};
+
+    --custom-primary: #{mat.get-theme-color($custom-theme, primary)};
+    --custom-on-primary: #{mat.get-theme-color($custom-theme, on-primary)};
+    --custom-secondary: #{mat.get-theme-color($custom-theme, secondary)};
+    --custom-on-secondary: #{mat.get-theme-color($custom-theme, on-secondary)};
+    --custom-tertiary: #{mat.get-theme-color($custom-theme, tertiary)};
+    --custom-on-tertiary: #{mat.get-theme-color($custom-theme, on-tertiary)};
+    --custom-on-surface: #{mat.get-theme-color($custom-theme, on-surface)};
+
 }
 
