@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="0; url=./">
+  <script type="text/javascript">
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+</head>
+<body>
+<p>Redirecting...</p>
+<script type="text/javascript">
+  sessionStorage.redirect = location.href;
+  window.location.replace("./");
+</script>
+</body>
+</html>
