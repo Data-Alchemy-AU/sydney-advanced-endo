@@ -1,0 +1,32 @@
+.theme-switcher-tab {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  width: 300px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 9000 !important;
+
+  &.collapsed {
+    /* Collapse the panel so that only the header (approx. 40px tall) is visible */
+    transform: translateY(calc(100% - 40px));
+  }
+
+  .tab-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--custom-primary);  // Soft red/pink background
+    color: var(--custom-on-primary);
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .tab-content {
+    padding: 1rem;
+  }
+}

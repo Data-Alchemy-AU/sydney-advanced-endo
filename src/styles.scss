@@ -7,6 +7,9 @@
 //@use "./styles/themes/custom-theme" as custom-theme;
 
 @import "./styles/theme-st-vincents";
+@import "./styles/theme-green";
+@import "./styles/theme-purple";
+
 
 @include mat.core();
 //@include mat.theme(custom-theme.$theme);

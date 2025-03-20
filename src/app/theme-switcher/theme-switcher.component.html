@@ -1,0 +1,18 @@
+<div class="theme-switcher-tab" [class.collapsed]="!expanded">
+  <div class="tab-header" (click)="toggle()">
+    <span>For Tamie 🐶: Theme Switcher</span>
+    <button mat-icon-button (click)="toggle(); $event.stopPropagation()">
+      <mat-icon>{{ expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+    </button>
+  </div>
+  <div class="tab-content" *ngIf="expanded">
+    <mat-button-toggle-group
+      name="theme"
+      [value]="selectedTheme"
+      (change)="onThemeChange($event.value)">
+      <mat-button-toggle *ngFor="let theme of themes" [value]="theme.value">
+        {{ theme.viewValue }}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
