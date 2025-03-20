@@ -1,7 +1,0 @@
-{
-  "imageCarouselArray":[
-      {"img": "./assets/Carousel/image1.jpeg", "alt": "", "text": "Sydney Advanced Endocrinology"},
-      {"img": "./assets/Carousel/image2.jpeg", "alt": "", "text": "Sydney Advanced Endocrinology"},
-      {"img": "./assets/Carousel/image3.jpeg", "alt": "", "text": "Sydney Advanced Endocrinology"}
-    ]
-}
