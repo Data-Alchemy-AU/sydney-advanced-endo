@@ -16,7 +16,7 @@ interface SitemapEntry {
     RouterLink,
     CommonModule
   ],
-  styleUrls: ['./sitemap.component.css']
+  styleUrls: ['./sitemap.component.scss']
 })
 export class SitemapComponent implements OnInit {
   sitemapLinks: SitemapEntry[] = [];

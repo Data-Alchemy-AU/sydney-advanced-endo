@@ -1,45 +1,32 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Result } from './image-carousel/result';
-import {catchError, Observable, of} from "rxjs";
-import { environment } from '../environments/environment';
-
-
+import { catchError, map, Observable, of } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class ImageCarouselService {
-  private url = `${environment.apiUrl}/imageCarouselArray`;
-  constructor(
-    private http: HttpClient) {
-  }
+  private jsonUrl = 'assets/config_data.json';
 
-  // async getAllImageCarouselItems(): Promise<Result[]> {
-  //   const data = await fetch(this.url);
-  //   return (await data.json()) ?? [];
-  // }
-  //
-  // async getImageCarouselItemById(id: number): Promise<Result| undefined> {
-  //   const data = await fetch(`${this.url}/${id}`);
-  //   return (await data.json()) ?? {};
-  // }
+  constructor(private http: HttpClient) {}
 
   getAllImageCarouselItems(): Observable<Result[]> {
-    return this.http.get<Result[]>(this.url).pipe(
+    return this.http.get<{ imageCarouselArray: Result[] }>(this.jsonUrl).pipe(
+      map(data => data.imageCarouselArray || []),
       catchError(error => {
         console.error('Error fetching image URLs:', error);
-        return of([]); // Return an empty array if API fails
+        return of([]); // Return an empty array if JSON fetching fails
       })
     );
   }
 
   getImageCarouselItemById(id: number): Observable<undefined | Result> {
-    return this.http.get<Result>(`${this.url}/${id}`).pipe(
+    return this.http.get<{ imageCarouselArray: Result[] }>(this.jsonUrl).pipe(
+      map(data => data.imageCarouselArray.find(item => item.id === id)),
       catchError(error => {
-        console.error(`Error fetching image ${id}: `, error);
-        return of(undefined); // Return an empty array if API fails
+        console.error(`Error fetching image ${id}:`, error);
+        return of(undefined);
       })
     );
   }

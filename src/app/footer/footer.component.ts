@@ -9,7 +9,7 @@ import {LogoAdvancedComponent} from "../logo-advanced/logo-advanced.component";
 @Component({
   selector: 'app-footer',
     imports: [
-        RouterLink, LogoComponent, MatAnchor, MatToolbar, MatDivider, LogoAdvancedComponent
+        RouterLink, MatAnchor, MatToolbar, MatDivider, LogoAdvancedComponent
     ],
   templateUrl: './footer.component.html',
   standalone: true,

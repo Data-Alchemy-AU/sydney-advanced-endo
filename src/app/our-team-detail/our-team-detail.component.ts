@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ProfileService} from "../profile.service";
 import {Profile} from "../profile";
@@ -20,22 +20,24 @@ import {ButtonSharedComponent} from "../components/buttons/button-shared/button-
   styleUrl: './our-team-detail.component.scss'
 })
 
-export class OurTeamDetailComponent {
-  route: ActivatedRoute = inject(ActivatedRoute);
-  profileService  = inject(ProfileService);
-  profile: Profile | undefined;
+export class OurTeamDetailComponent implements OnInit {
+  profile?: Profile;
 
-  constructor() {
-    const profileId = this.route.snapshot.params['id'];
-    console.log(profileId);
-    this.profileService.getProfileById(profileId)
-      .subscribe({
-        next: (profile) => {
-          this.profile = profile
-      },
-        error: (error) => {
-          console.error('Profile not found!');
+  constructor(
+    private route: ActivatedRoute,
+    private profileService: ProfileService
+  ) {}
+
+  ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    if (id) {
+      this.profileService.getProfileById(id).subscribe((profile) => {
+        if (profile) {
+          this.profile = profile;
+        } else {
+          console.error(`Profile with ID ${id} not found`);
         }
-    });
+      });
+    }
   }
 }

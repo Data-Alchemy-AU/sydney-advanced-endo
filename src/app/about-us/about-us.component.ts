@@ -1,5 +1,4 @@
 import { Component , OnInit} from '@angular/core';
-import {ClinicService} from "../clinic.service";
 import {ButtonContactEnquireComponent} from "../button-contact-enquire/button-contact-enquire.component";
 import {BannerLogoComponent} from "../banner-logo/banner-logo.component";
 
@@ -13,12 +12,6 @@ import {BannerLogoComponent} from "../banner-logo/banner-logo.component";
   standalone: true,
   styleUrl: './about-us.component.scss'
 })
-export class AboutUsComponent implements OnInit {
-  clinicName: string = "";
+export class AboutUsComponent {
 
-  constructor(private clinicService: ClinicService) { }
-
-  ngOnInit(){
-    this.clinicName = this.clinicService.getClinicName();
-  }
 }

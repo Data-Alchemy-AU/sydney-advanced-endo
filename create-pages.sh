@@ -63,3 +63,9 @@ ng generate component banner-contact
 <button mat-button routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</button>
 <button mat-button routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</button>
 <button mat-flat-button color="primary" routerLink="/enquire" >Enquire</button>
+
+mkdir -p docs
+ng build --configuration=production --output-path docs --base-href /sydney-advnaced-endo/
+touch docs/.nojekyll
+npx angular-cli-ghpages --dir=docs
+

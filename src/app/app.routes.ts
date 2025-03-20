@@ -8,7 +8,6 @@ import {EnquireComponent} from "./enquire/enquire.component";
 import {OurTeamComponent} from "./our-team/our-team.component";
 import {OurTeamDetailComponent} from "./our-team-detail/our-team-detail.component";
 import {SitemapComponent} from "./sitemap/sitemap.component";
-import {TestComponent } from "./test/test.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent, data: {breadcrumb: '<mat-icon>home</mat-icon>'}},

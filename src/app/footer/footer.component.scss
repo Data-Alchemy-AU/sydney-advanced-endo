@@ -42,7 +42,7 @@
 
     .copyright {
       text-align: left;
-      color: var(--mat-sys-on-secondary-background);
+      color: var(--custom-on-secondary);
       display: flex;
       flex-direction: column;
       justify-content: space-around; /* Distributes the rows evenly within the container */
@@ -60,7 +60,7 @@
       a {
         text-decoration: none !important; /* Force remove underline */
         font-style: normal;
-        color: var(--mat-sys-on-secondary-fixed-variant);
+        color: var(--custom-primary);
         //margin: 0 8px;
       }
 
